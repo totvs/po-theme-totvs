@@ -450,6 +450,13 @@
   --color-chart-background-color: var(--color-white);
   --color-chart-legend-wrapper-scrollbar: var(--color-primary-alpha-50);
 
+  /**
+   * Chart Types
+   */
+   --color-chart-gauge-base-path-color: var(--color-neutral-light-80);
+   --color-chart-gauge-text-content-focus: var(--color-secondary);
+   --color-chart-gauge-text-description-color: var(--color-neutral);
+
 /*------------------------------------*\
   CHECKBOX GROUP
 \*------------------------------------*/
@@ -986,48 +993,58 @@
   TABLE
 \*------------------------------------*/
 
-  --color-table-background-color-action-hover: var(--color-primary-light-95);
-  --color-table-background-color-actions: var(--color-white);
-  --color-table-background-color-active: var(--color-primary-light-95);
-  --color-table-background-color-detail-content: var(--color-white);
-  --color-table-background-color-footer-show-subtitle: var(--color-white);
-  --color-table-background-color-header: var(--color-white);
-  --color-table-background-color-overlay: var(--color-secondary-dark-60-alpha-70);
-  --color-table-background-color-overlay-content: var(--color-white);
-  --color-table-background-color-row-strip: var(--color-neutral-light-98);
-  --color-table-background-color-scrollbar: var(--color-primary);
-  --color-table-background-color-selected: var(--color-primary);
-  --color-table-background-color-table: var(--color-white);
+--color-table-background-color-action-hover: var(--color-primary-light-95);
+--color-table-background-color-actions: var(--color-white);
+--color-table-background-color-active: var(--color-primary-light-95);
+--color-table-background-color-detail-content: var(--color-white);
+--color-table-background-color-footer-show-subtitle: var(--color-white);
+--color-table-background-color-header: var(--color-white);
+--color-table-background-color-overlay: var(--color-secondary-dark-60-alpha-70);
+--color-table-background-color-overlay-content: var(--color-white);
+--color-table-background-color-row-strip: var(--color-neutral-light-98);
+--color-table-background-color-scrollbar: var(--color-primary);
+--color-table-background-color-selected: var(--color-primary);
+--color-table-background-color-table: var(--color-white);
 
-  --color-table-border-footer-show-subtitle: var(--color-neutral-light-90);
-  --color-table-border-select-checkbox: var(--color-neutral-light-60);
-  --color-table-border-selected-checkbox: var(--color-primary);
-  --color-table-border-rows: var(--color-neutral-light-90);
+--color-table-border-footer-show-subtitle: var(--color-neutral-light-90);
+--color-table-border-select-checkbox: var(--color-neutral-light-60);
+--color-table-border-selected-checkbox: var(--color-primary);
+--color-table-border-rows: var(--color-neutral-light-90);
 
-  --color-table-box-shadow-action: var(--color-black-alpha-30);
-  --color-table-box-shadow-checkbox: var(--color-black-alpha-15);
-  --color-table-box-shadow-footer: var(--color-primary-light-80);
-  --color-table-box-shadow-overlay-content: var(--color-black-alpha-30);
-  --color-table-box-shadow-header: var(--color-primary-light-80);
+--color-table-box-shadow-action: var(--color-black-alpha-30);
+--color-table-box-shadow-checkbox: var(--color-black-alpha-15);
+--color-table-box-shadow-footer: var(--color-primary-light-80);
+--color-table-box-shadow-overlay-content: var(--color-black-alpha-30);
+--color-table-box-shadow-header: var(--color-primary-light-80);
 
-  --color-table-color-actions: var(--color-primary);
-  --color-table-color-detail: var(--color-neutral-light-40);
-  --color-table-color-disabled: var(--color-neutral-light-80);
-  --color-table-color-footer-show-subtitle: var(--color-primary);
-  --color-table-color-header: var(--color-primary);
-  --color-table-color-select: var(--color-white);
-  --color-table-color-subtitle-text: var(--color-white);
-  --color-table-color-single-action-hover: var(--color-primary-dark-20);
-  --color-table-color-text: var(--color-neutral-dark-60);
+--color-table-color-actions: var(--color-primary);
+--color-table-color-detail: var(--color-neutral-light-40);
+--color-table-color-disabled: var(--color-neutral-light-80);
+--color-table-color-footer-show-subtitle: var(--color-primary);
+--color-table-color-header: var(--color-primary);
+--color-table-color-select: var(--color-white);
+--color-table-color-subtitle-text: var(--color-white);
+--color-table-color-single-action-hover: var(--color-primary-dark-20);
+--color-table-color-text: var(--color-neutral-dark-60);
 
 /*------------------------------------*\
-  TABLE COLUMN LINK
+TABLE COLUMN LINK
 \*------------------------------------*/
 
-  --color-table-color-link: var(--color-primary);
-  --color-table-color-link-disabled: var(--color-neutral-light-80);
-  --color-table-color-link-hover: var(--color-primary-dark-20);
-  --color-table-color-link-pressed: var(--color-primary-dark-40);
+--color-table-color-link: var(--color-primary);
+--color-table-color-link-disabled: var(--color-neutral-light-80);
+--color-table-color-link-hover: var(--color-primary-dark-20);
+--color-table-color-link-pressed: var(--color-primary-dark-40);
+
+/*------------------------------------*\
+TABLE COLUMN MANAGER
+\*------------------------------------*/
+
+--color-table-column-manager-body-color-background-scrollbar: var(--color-primary);
+--color-table-column-manager-border-color: var(--color-neutral-light-90);
+--color-table-column-manager-close-button-color: var(--color-primary);
+--color-table-column-manager-header-title: var(--color-neutral-dark-60);
+--color-table-column-manager-outline-color-focus: var(--color-secondary);
 
 /*------------------------------------*\
   TAG
@@ -1094,6 +1111,18 @@
 
   --color-tooltip-background-color-balloon: var(--color-neutral);
   --color-tooltip-color-text-balloon: var(--color-white);
+
+/*------------------------------------*\
+  TREEVIEW
+\*------------------------------------*/
+
+  /** Tree View Item */
+  --color-tree-view-item-border-bottom-color: var(--color-neutral-light-90);
+
+  /** Tree View Item Header */
+  --color-tree-view-item-header-button-color: var(--color-primary);
+  --color-tree-view-item-header-button-focus: var(--color-secondary);
+  --color-tree-view-item-header-label-text-color: var(--color-neutral);
 
 /*------------------------------------*\
   UPLOAD
