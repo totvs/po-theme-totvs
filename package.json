@@ -1,6 +1,6 @@
 {
   "name": "@totvs/portinari-theme",
-  "version": "1.23.0",
+  "version": "1.24.0",
   "author": "Totvs",
   "description": "Portinari Theme - Totvs Default Theme",
   "repository": {
@@ -12,6 +12,6 @@
     "build": "po-theme build --fonts --name=default"
   },
   "devDependencies": {
-    "@portinari/style": "^1.23.0"
+    "@portinari/style": "^1.24.0"
   }
 }
