@@ -1,17 +1,17 @@
 {
-  "name": "@totvs/portinari-theme",
+  "name": "@totvs/po-theme",
   "version": "1.28.0",
   "author": "Totvs",
-  "description": "Portinari Theme - Totvs Default Theme",
+  "description": "PO Theme - Totvs Default Theme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/totvs/portinari-theme-totvs"
+    "url": "https://github.com/totvs/po-theme-totvs"
   },
   "license": "MIT",
   "scripts": {
     "build": "po-theme build --fonts --name=default"
   },
   "devDependencies": {
-    "@portinari/style": "^1.28.0"
+    "@po/style": "^1.28.0"
   }
 }
