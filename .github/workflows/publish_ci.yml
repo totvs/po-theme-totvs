@@ -1,8 +1,6 @@
 name: Run publish @totvs/po-theme
 on:
-  create:
-    tags:
-    - v**
+  workflow_dispatch:
 
 jobs:
   build:
@@ -28,7 +26,7 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     - name: Add "latest" tag
-      if: (!contains(github.ref, '-next') && !contains(github.ref, '-rc'))
-      run: npm dist-tags add @totvs/po-theme@${{ steps.package-version.outputs.current-version}}
+      if: (!contains(steps.package-version.outputs.current-version, '-next') && !contains(steps.package-version.outputs.current-version, '-rc'))
+      run: npm dist-tags add @totvs/po-theme@${{ steps.package-version.outputs.current-version }}
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
