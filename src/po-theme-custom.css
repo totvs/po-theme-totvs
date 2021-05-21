@@ -236,7 +236,6 @@
   --font-family-theme: NunitoSans;
   --font-family-theme-bold: NunitoSans-Bold;
   --font-family-theme-extra-light: NunitoSans-ExtraLight;
-
 }
 
 @font-face {
@@ -437,11 +436,14 @@
   --color-calendar-text-box-background-active: var(--color-white);
 
   --color-calendar-background-color-box-background-selected: var(--color-tertiary);
-  --color-calendar-background-color-box-background-today: var(--color-primary-light-80);
+  --color-calendar-background-color-box-background-range: var(--color-primary-light-80);
   --color-calendar-background-color-box-background-today-hover: var(--color-neutral-light-80);
+
+  --color-calendar-background-color-border-today: var(--color-primary);
 
   --color-calendar-color-box-foreground: var(--color-neutral);
   --color-calendar-color-box-foreground-selected: var(--color-white);
+  --color-calendar-color-box-foreground-range: var(--color-primary);
   --color-calendar-color-box-foreground-today: var(--color-primary);
   --color-calendar-color-box-foreground-disabled: var(--color-neutral-light-80);
 
@@ -455,7 +457,7 @@
   --color-chart-legend-text: var(--color-neutral);
   --color-chart-axis-label-text: var(--color-neutral-dark-60);
 
-  /**
+/**
    * Chart Types
    */
   --color-chart-gauge-base-path-color: var(--color-neutral-light-80);
@@ -468,18 +470,18 @@
   CHECKBOX
 \*------------------------------------*/
 
---color-checkbox-background-color: var(--color-white);
---color-checkbox-background-color-active: var(--color-primary);
---color-checkbox-background-color-disabled: var(--color-neutral-light-90);
---color-checkbox-background-color-icon-disabled: var(--color-neutral-light-60);
---color-checkbox-box-shadow-color-focusable: var(--color-primary-dark-20);
+  --color-checkbox-background-color: var(--color-white);
+  --color-checkbox-background-color-active: var(--color-primary);
+  --color-checkbox-background-color-disabled: var(--color-neutral-light-90);
+  --color-checkbox-background-color-icon-disabled: var(--color-neutral-light-60);
+  --color-checkbox-box-shadow-color-focusable: var(--color-primary-dark-20);
 
---color-checkbox-border-input: var(--color-neutral-light-60);
---color-checkbox-border-input-active: var(--color-primary);
---color-checkbox-border-input-disabled: var(--color-neutral-light-60);
---color-checkbox-border-input-invalid: var(--color-danger);
+  --color-checkbox-border-input: var(--color-neutral-light-60);
+  --color-checkbox-border-input-active: var(--color-primary);
+  --color-checkbox-border-input-disabled: var(--color-neutral-light-60);
+  --color-checkbox-border-input-invalid: var(--color-danger);
 
---color-checkbox-color-active: var(--color-white);
+  --color-checkbox-color-active: var(--color-white);
 
 /*------------------------------------*\
   CHECKBOX GROUP
@@ -608,7 +610,6 @@
   --color-gauge-legend-scrollbar: var(--color-primary-alpha-50);
   --color-gauge-legend-text: var(--color-neutral);
   --color-gauge-pointer-color: var(--color-neutral);
-
 
 /*------------------------------------*\
   INFO
@@ -912,22 +913,22 @@
   PROGRESS
 \*------------------------------------*/
 
---color-progress-color-info-icon: var(--color-primary);
---color-progress-color-text: var(--color-neutral);
---color-progress-color-text-success: var(--color-success);
---color-progress-color-text-error: var(--color-danger);
---color-progress-color-info: var(--color-neutral);
+  --color-progress-color-info-icon: var(--color-primary);
+  --color-progress-color-text: var(--color-neutral);
+  --color-progress-color-text-success: var(--color-success);
+  --color-progress-color-text-error: var(--color-danger);
+  --color-progress-color-info: var(--color-neutral);
 
---color-progress-border-color-info-icon-close: var(--color-secondary);
+  --color-progress-border-color-info-icon-close: var(--color-secondary);
 
 /*------------------------------------*\
   PROGRESS BAR
 \*------------------------------------*/
 
---color-progress-bar-background-color-bar: var(--color-tertiary-light-90);
---color-progress-bar-background-color-default: var(--color-tertiary);
---color-progress-bar-background-color-success: var(--color-success);
---color-progress-bar-background-color-error: var(--color-danger);
+  --color-progress-bar-background-color-bar: var(--color-tertiary-light-90);
+  --color-progress-bar-background-color-default: var(--color-tertiary);
+  --color-progress-bar-background-color-success: var(--color-success);
+  --color-progress-bar-background-color-error: var(--color-danger);
 
 /*------------------------------------*\
   RADIO-GROUP
@@ -1048,62 +1049,62 @@
   TABLE
 \*------------------------------------*/
 
---color-table-background-color-action-hover: var(--color-primary-light-95);
---color-table-background-color-actions: var(--color-white);
---color-table-background-color-active: var(--color-primary-light-95);
---color-table-background-color-detail-content: var(--color-white);
---color-table-background-color-footer-show-subtitle: var(--color-white);
---color-table-background-color-header: var(--color-white);
---color-table-background-color-overlay: var(--color-secondary-dark-60-alpha-70);
---color-table-background-color-overlay-content: var(--color-white);
---color-table-background-color-row-strip: var(--color-neutral-light-98);
---color-table-background-color-scrollbar: var(--color-primary);
---color-table-background-color-selected: var(--color-primary);
---color-table-background-color-table: var(--color-white);
---color-table-background-color-radio: var(--color-white);
---color-table-background-color-radio-active: var(--color-primary);
+  --color-table-background-color-action-hover: var(--color-primary-light-95);
+  --color-table-background-color-actions: var(--color-white);
+  --color-table-background-color-active: var(--color-primary-light-95);
+  --color-table-background-color-detail-content: var(--color-white);
+  --color-table-background-color-footer-show-subtitle: var(--color-white);
+  --color-table-background-color-header: var(--color-white);
+  --color-table-background-color-overlay: var(--color-secondary-dark-60-alpha-70);
+  --color-table-background-color-overlay-content: var(--color-white);
+  --color-table-background-color-row-strip: var(--color-neutral-light-98);
+  --color-table-background-color-scrollbar: var(--color-primary);
+  --color-table-background-color-selected: var(--color-primary);
+  --color-table-background-color-table: var(--color-white);
+  --color-table-background-color-radio: var(--color-white);
+  --color-table-background-color-radio-active: var(--color-primary);
 
---color-table-border-footer-show-subtitle: var(--color-neutral-light-90);
---color-table-border-select-checkbox: var(--color-neutral-light-60);
---color-table-border-selected-checkbox: var(--color-primary);
---color-table-border-rows: var(--color-neutral-light-90);
---color-table-border-select-radio: var(--color-neutral-light-60);
---color-table-border-select-radio-focusable: var(--color-primary-dark-20);
+  --color-table-border-footer-show-subtitle: var(--color-neutral-light-90);
+  --color-table-border-select-checkbox: var(--color-neutral-light-60);
+  --color-table-border-selected-checkbox: var(--color-primary);
+  --color-table-border-rows: var(--color-neutral-light-90);
+  --color-table-border-select-radio: var(--color-neutral-light-60);
+  --color-table-border-select-radio-focusable: var(--color-primary-dark-20);
 
---color-table-box-shadow-action: var(--color-black-alpha-30);
---color-table-box-shadow-checkbox: var(--color-black-alpha-15);
---color-table-box-shadow-footer: var(--color-primary-light-80);
---color-table-box-shadow-overlay-content: var(--color-black-alpha-30);
---color-table-box-shadow-header: var(--color-primary-light-80);
+  --color-table-box-shadow-action: var(--color-black-alpha-30);
+  --color-table-box-shadow-checkbox: var(--color-black-alpha-15);
+  --color-table-box-shadow-footer: var(--color-primary-light-80);
+  --color-table-box-shadow-overlay-content: var(--color-black-alpha-30);
+  --color-table-box-shadow-header: var(--color-primary-light-80);
 
---color-table-color-actions: var(--color-primary);
---color-table-color-detail: var(--color-neutral-light-40);
---color-table-color-disabled: var(--color-neutral-light-80);
---color-table-color-footer-show-subtitle: var(--color-primary);
---color-table-color-header: var(--color-primary);
---color-table-color-select: var(--color-white);
---color-table-color-subtitle-text: var(--color-white);
---color-table-color-single-action-hover: var(--color-primary-dark-20);
---color-table-color-text: var(--color-neutral-dark-60);
+  --color-table-color-actions: var(--color-primary);
+  --color-table-color-detail: var(--color-neutral-light-40);
+  --color-table-color-disabled: var(--color-neutral-light-80);
+  --color-table-color-footer-show-subtitle: var(--color-primary);
+  --color-table-color-header: var(--color-primary);
+  --color-table-color-select: var(--color-white);
+  --color-table-color-subtitle-text: var(--color-white);
+  --color-table-color-single-action-hover: var(--color-primary-dark-20);
+  --color-table-color-text: var(--color-neutral-dark-60);
 
 /*------------------------------------*\
 TABLE COLUMN LINK
 \*------------------------------------*/
 
---color-table-color-link: var(--color-primary);
---color-table-color-link-disabled: var(--color-neutral-light-80);
---color-table-color-link-hover: var(--color-primary-dark-20);
---color-table-color-link-pressed: var(--color-primary-dark-40);
+  --color-table-color-link: var(--color-primary);
+  --color-table-color-link-disabled: var(--color-neutral-light-80);
+  --color-table-color-link-hover: var(--color-primary-dark-20);
+  --color-table-color-link-pressed: var(--color-primary-dark-40);
 
 /*------------------------------------*\
 TABLE COLUMN MANAGER
 \*------------------------------------*/
 
---color-table-column-manager-body-color-background-scrollbar: var(--color-primary);
---color-table-column-manager-border-color: var(--color-neutral-light-90);
---color-table-column-manager-close-button-color: var(--color-primary);
---color-table-column-manager-header-title: var(--color-neutral-dark-60);
---color-table-column-manager-outline-color-focus: var(--color-secondary);
+  --color-table-column-manager-body-color-background-scrollbar: var(--color-primary);
+  --color-table-column-manager-border-color: var(--color-neutral-light-90);
+  --color-table-column-manager-close-button-color: var(--color-primary);
+  --color-table-column-manager-header-title: var(--color-neutral-dark-60);
+  --color-table-column-manager-outline-color-focus: var(--color-secondary);
 
 /*------------------------------------*\
   TAG
@@ -1122,7 +1123,7 @@ TABLE COLUMN MANAGER
   --color-tag-background-color-info: var(--color-neutral);
   --color-tag-background-color-success: var(--color-success);
   --color-tag-background-color-warning: var(--color-warning);
-  --color-tag-background-color-white:var(--color-white);
+  --color-tag-background-color-white: var(--color-white);
 
   --color-tag-inverse-border-color-01: var(--color-01);
   --color-tag-inverse-border-color-02: var(--color-02);
@@ -1246,5 +1247,4 @@ TABLE COLUMN MANAGER
   --color-widget-background-color-disabled: var(--color-neutral-light-90);
   --color-widget-background-color-scroll-disabled: var(--color-neutral-light-40);
   --color-widget-color-disabled: var(--color-neutral-light-40);
-
 }
