@@ -7,9 +7,12 @@
  *
  * COMMONS
  * Common......................configurações.
- * Color.......................variáveis globais de cores.
+ * Color Legacy................variáveis globais de cores.
  * Color Palette...............variáveis da peleta de cores.
  * Font........................variáveis de fontes.
+ *
+ * ANIMALIADS
+ * design tokens...............tema do PO UI no AnimaliaDS.
  *
  * COMPONENTS
  * Accordion...................variáveis do Accordion.
@@ -20,7 +23,6 @@
  * Button Group................variáveis do Button Group.
  * Calendar....................variáveis do Calendar.
  * Chart.......................variáveis do Chart.
- * Checkbox....................variáveis do Checkbox.
  * Checkbox Group..............variáveis do Checkbox Group.
  * Combo.......................variáveis do Combo.
  * Container...................variáveis do Container.
@@ -70,10 +72,12 @@
  * Tab Dropdown................variáveis do Tab Dropdown.
  * Table.......................variáveis do Table.
  * Table Column Link...........variáveis do Table Column Link.
+ * Table Column Manager .......variáveis do Table Column Manager.
  * Tag.........................variáveis do Tag.
  * Textarea....................variáveis do Textarea.
  * Toolbar.....................variáveis do Toolbar.
  * Tooltip.....................variáveis do Tooltip.
+ * Tree View...................variáveis do Tree View.
  * Upload......................variáveis do Upload.
  * Widget......................variáveis do Widget.
  */
@@ -94,117 +98,48 @@
 }
 
 /*------------------------------------*\
-  COLOR
+  COLOR LEGACY
 \*------------------------------------*/
 
 :root {
-  /* Cor do background da linha da tabela */
-  --color-primary-light-95: #f3fafc;
-
-  /* Borda inferior da Table Header */
-  --color-primary-light-80: #ceeaf2;
-
-  /* Scroll (opacidade de 50%) */
-  --color-primary-alpha-50: rgba(12, 154, 190, 0.5);
-
-  /* Botão primário, Links, Cor da borda do input selecionado, Cor da borda do botão secundário */
-  --color-primary: #0c9abe;
-
-  /* Hover do Botão primário, Links, Cor da borda do botão secundário */
-  --color-primary-dark-20: #097b98;
-
-  /* Pressed do Botão primário, Links, Cor da borda do botão secundário */
-  --color-primary-dark-40: #075c72;
-
-  /* Secondary */
+  --color-primary-light-95: #f3fafc; /* Cor do background da linha da tabela */
+  --color-primary-light-80: #ceeaf2; /* Borda inferior da Table Header */
+  --color-primary-alpha-50: rgba(12, 154, 190, 0.5); /* Scroll (opacidade de 50%) */
+  --color-primary: #0c9abe; /* Botão primário, Links, Cor da borda do input selecionado, Cor da borda do botão secundário */
+  --color-primary-dark-20: #097b98; /* Hover do Botão primário, Links, Cor da borda do botão secundário */
+  --color-primary-dark-40: #075c72; /* Pressed do Botão primário, Links, Cor da borda do botão secundário */
   --color-secondary: #0d729c;
-
   --color-secondary-dark-20: #0a5b7c;
-
   --color-secondary-dark-40: #07445d;
-
-  /* Overlay de Modal e Menu (70% de opacidade) */
-  --color-secondary-dark-60-alpha-70: rgba(5, 45, 62, 0.7);
-
+  --color-secondary-dark-60-alpha-70: rgba(5, 45, 62, 0.7); /* Overlay de Modal e Menu (70% de opacidade) */
   --color-secondary-dark-60: #052d3e;
-
-  /* Tertiary */
-
-  /* Cor do background da linha de arquivo em carregamento (Upload) */
-  --color-tertiary-light-90: #eaf7f9;
-
-  /* Borda esquerda do menu lateral selecionado, Tab selecionada, Card em destaque */
-  --color-tertiary: #29b6c5;
-
-  /* Cor de gráficos, botão do disclaimer */
-  --color-tertiary-dark-5: #26acba;
-
+  --color-tertiary-light-90: #eaf7f9; /* Cor do background da linha de arquivo em carregamento (Upload) */
+  --color-tertiary: #29b6c5; /* Borda esquerda do menu lateral selecionado, Tab selecionada, Card em destaque */
+  --color-tertiary-dark-5: #26acba; /* Cor de gráficos, botão do disclaimer */
   --color-tertiary-dark-40: #186d76;
-
   --color-tertiary-dark-60: #10484e;
-
   --color-white: #ffffff;
-
   --color-white-alpha-30: rgba(255, 255, 255, 0.3);
-
-  /* Background da página, Background da linha selecionada */
-  --color-neutral-light-98: #fbfbfb;
-
-  /* Borda inferior de item de tabela, Base do Slider, Background do Input inativo */
-  --color-neutral-light-90: #eceeee;
-
-  /* Step inativo, Base Switch desligado */
-  --color-neutral-light-80: #dadedf;
-
-  /* Ícone desabilitado, Slider desabilitado, Borda de input */
-  --color-neutral-light-60: #b6bdbf;
-
-  /* Texto do Placeholder */
-  --color-neutral-light-40: #9da7a9;
-
-  /* Borda superior do itens do menu (45% de opacidade) */
-  --color-neutral-alpha-45: rgba(74, 92, 96, 0.45);
-
-  /* Background do Feedback, Pill de informação */
-  --color-neutral: #4a5c60;
-
-  /* Usar em menu: Área do logo, Background do menu */
-  --color-neutral-dark-40: #2c3739;
-
-  /* Texto */
-  --color-neutral-dark-60: #1d2426;
-
-  /* Usar em sombras (10% de opacidade) */
-  --color-black-alpha-10: rgba(0, 0, 0, 0.1);
-
-  /* Usar em menu: Hover - Background de item de menu (15% de opacidade) */
-  --color-black-alpha-15: rgba(0, 0, 0, 0.15);
-
-  /* Usar em menu: Background dos itens de segundo nível (30% de opacidade) */
-  --color-black-alpha-30: rgba(0, 0, 0, 0.3);
-
+  --color-neutral-light-98: #fbfbfb; /* Background da página, Background da linha selecionada */
+  --color-neutral-light-90: #eceeee; /* Borda inferior de item de tabela, Base do Slider, Background do Input inativo */
+  --color-neutral-light-80: #dadedf; /* Step inativo, Base Switch desligado */
+  --color-neutral-light-60: #b6bdbf; /* Ícone desabilitado, Slider desabilitado, Borda de input */
+  --color-neutral-light-40: #9da7a9; /* Texto do Placeholder */
+  --color-neutral-alpha-45: rgba(74, 92, 96, 0.45); /* Borda superior do itens do menu (45% de opacidade) */
+  --color-neutral: #4a5c60; /* Background do Feedback, Pill de informação */
+  --color-neutral-dark-40: #2c3739; /* Usar em menu: Área do logo, Background do menu */
+  --color-neutral-dark-60: #1d2426; /* Texto */
+  --color-black-alpha-10: rgba(0, 0, 0, 0.1); /* Usar em sombras (10% de opacidade) */
+  --color-black-alpha-15: rgba(0, 0, 0, 0.15); /* Usar em menu: Hover - Background de item de menu (15% de opacidade) */
+  --color-black-alpha-30: rgba(0, 0, 0, 0.3); /* Usar em menu: Background dos itens de segundo nível (30% de opacidade) */
   --color-black: #000000;
-
-  /* Background do Feedback de sucesso */
-  --color-success: #00b28e;
-
-  /* Background do Feedback de atenção */
-  --color-warning: #ea9b3e;
-
+  --color-success: #00b28e; /* Background do Feedback de sucesso */
+  --color-warning: #ea9b3e; /* Background do Feedback de atenção */
   --color-danger-light-40: #dc918c;
-
-  /* Background do Feedback de erro, Borda de Input com erro */
-  --color-danger: #c64840;
-
-  /* Background disclaimer danger */
-  --color-danger-dark-5: #bb443c;
-
-  /* Hover para botão danger */
-  --color-danger-dark-20: #9e3933;
-
-  /* Estilo ativo para botão danger */
-  --color-danger-dark-40: #762b26;
-
+  --color-danger: #c64840; /* Background do Feedback de erro, Borda de Input com erro */
+  --color-danger-dark-5: #bb443c; /* Background disclaimer danger */
+  --color-danger-dark-20: #9e3933; /* Hover para botão danger */
+  --color-danger-dark-40: #762b26; /* Estilo ativo para botão danger */
   --color-transparent: transparent;
 
 /*------------------------------------*\
@@ -260,6 +195,58 @@
 }
 
 /*------------------------------------*\
+   ANIMALIADS
+\*------------------------------------*/
+/*------------------------------------*\
+   TOKENS - THEME TOTVS - ANIMALIADS - ********   DEVE SER REVISTO COM MAIS ATENÇÃO   *********
+\*------------------------------------*/
+html {
+  --color-action-default: var(--color-primary, #0c9abe);
+  --color-action-hover: var(--color-primary-dark-5, #0a7d99);
+  --color-action-pressed: var(--color-primary-dark-40, #096d86);
+  --color-action-disabled: var(--color-neutral-light-60, #b6bdbf);
+  --color-action-focus: var(--color-primary-dark-60, #1d2426);
+  --color-brand-01-lightest: #19c5f0;
+  --color-brand-01-lighter: #0fbbe6;
+  --color-brand-01-light: #0dabd3;
+  --color-brand-01-base: var(--color-primary, #0c9abe);
+  --color-brand-01-dark: var(--color-primary-dark-20, #0b8cad);
+  --color-brand-01-darker: var(--color-primary-dark-40, #0a7d99);
+  --color-brand-01-darkest: var(--color-primary-dark-60, #096d86);
+  --color-brand-02-lightest: var(--color-secondary-light-95, #12a4e2);
+  --color-brand-02-lighter: var(--color-secondary-light-80, #1196d0);
+  --color-brand-02-light: #0f89bd;
+  --color-brand-02-base: var(--color-secondary, #0d729c);
+  --color-brand-02-dark: #0c6d97;
+  --color-brand-02-darker: #0b6084;
+  --color-brand-02-darkest: #095271;
+  --color-brand-03-lightest: var(--color-tertiary-light-90, #56cfdc);
+  --color-brand-03-lighter: #45cad9;
+  --color-brand-03-light: #34c5d5;
+  --color-brand-03-base: var(--color-tertiary, #29b6c5);
+  --color-brand-03-dark: var(--color-tertiary-dark-5, #26abba);
+  --color-brand-03-darker: var(--color-tertiary-dark-40, #239ca9);
+  --color-brand-03-darkest: #1f8c98;
+  --color-neutral-dark-70: var(--color-neutral, #4a5c60);
+  --color-neutral-dark-80: var(--color-neutral-dark-40, #2c3739);
+  --color-neutral-dark-90: var(--color-neutral-dark-60, #1d2426);
+  --color-neutral-dark-95: var(--color-black, #0b0e0e);
+  --color-neutral-light-10: var(--color-neutral-light-90, #eceeee);
+  --color-neutral-light-20: var(--color-neutral-light-80, #dadedf);
+  --color-neutral-light-30: var(--color-neutral-light-60, #b6bdbf);
+  --color-neutral-light-00: var(--color-white, #fff);
+  --color-neutral-light-05: var(--color-neutral-light-98, #fbfbfb);
+  --color-neutral-mid-40: var(--color-neutral-light-40, #9da7a9);
+  --color-neutral-mid-60: #6e7c7f;
+  --font-family-heading: Nunito;
+  --font-family-text: Nunito;
+  --font-family-code: Monospace;
+  --font-weight-extra-light: 200;
+  --text-transform-normal: normal;
+  --text-transform-uppercase: uppercase;
+}
+
+/*------------------------------------*\
   COMPONENTS
 \*------------------------------------*/
 :root {
@@ -305,7 +292,7 @@
  */
   --color-button-background-color: var(--color-transparent);
   --color-button-border: var(--color-primary);
-  --color-button-color: var(--color-primary);
+  --color-button-color: var(--color-primary); /* validar se está sendo aplicado */
 
   --color-button-background-color-hover: var(--color-transparent);
   --color-button-border-hover: var(--color-primary-dark-20);
@@ -1247,4 +1234,39 @@ TABLE COLUMN MANAGER
   --color-widget-background-color-disabled: var(--color-neutral-light-90);
   --color-widget-background-color-scroll-disabled: var(--color-neutral-light-40);
   --color-widget-color-disabled: var(--color-neutral-light-40);
+}
+
+ani-button {
+  --font-family: NunitoSans-Bold; /* necessário poi hoje nossos arquivos de font são separados */
+  --line-height: 150%; /* necessário para manter a altura do botão do PO UI */
+}
+
+ani-button[kind='primary'] {
+  --text-color: var(--color-button-color-primary); /* customização APENAS do que é diferente do default aplicado no tema */
+  --background: var(--color-button-background-color-primary);
+  --shadow: var(--shadow-md); /* token do animália */
+}
+
+ani-button[kind='secondary'] {
+  --text-color: var(--color-button-color);
+  --border-color: var(--color-button-border);
+
+  /* pressed */
+  --border-color-pressed: var(--color-button-border-pressed);
+}
+
+ani-button[kind='tertiary'] {
+  --text-color: var(--color-button-color-link);
+  --background-hover: var(--color-button-background-color-link-hover);
+  --text-color-hover: var(--color-button-color-link-hover);
+  --text-color-pressed: var(--color-button-color-link-pressed);
+  --background-pressed: var(--color-button-background-color-link-pressed);
+}
+
+@media screen and (max-width: 1366px) {
+  ani-button {
+    --font-size: var(--font-size-sm);
+    --line-height: 110%;
+    --spacing-squish: var(--spacing-squish-sm);
+  }
 }

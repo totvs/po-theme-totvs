@@ -12,6 +12,6 @@
     "build": "po-theme build --fonts --name=default"
   },
   "devDependencies": {
-    "@po-ui/style": "^5.4.0"
+    "@po-ui/style": "file:/Users/aline.lariguet/dev/po-ui/po-style/dist/style"
   }
 }
