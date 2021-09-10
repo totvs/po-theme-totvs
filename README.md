@@ -9,7 +9,7 @@ O **PO UI** possui o seu próprio tema, mas disponibilizamos um tema com os padr
 Para utilizá-lo, instale o pacote `@totvs/po-theme` conforme abaixo:
 
 ```
-npm i --save @totvs/po-theme
+npm i @totvs/po-theme
 ```
 
 Em seguida, atualize o arquivo `angular.json` para utilizar o tema.
