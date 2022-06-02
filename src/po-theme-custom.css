@@ -1136,6 +1136,10 @@ TABLE COLUMN MANAGER
   --color-table-column-manager-close-button-color: var(--color-primary);
   --color-table-column-manager-header-title: var(--color-neutral-dark-60);
   --color-table-column-manager-outline-color-focus: var(--color-secondary);
+  --color-arrow-column-manager: var(--color-primary);
+  --color-arrow-column-manager-hover: var(--color-primary-dark-40);
+  --color-arrow-column-manager-disabled: var(--color-neutral-alpha-45);
+  --color-arrow-column-manager-item-hover: var(--color-primary-light-80);
 
 /*------------------------------------*\
   TAG
