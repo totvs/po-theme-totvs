@@ -214,7 +214,8 @@
 
   --color-feedback-warning-base: #efba2a;
 
-  /* Background do Feedback de erro, Borda de Input com erro */
+  /* Background do Feedback de erro */
+  --color-feedback-negative-darker: #72211d;
 
   --color-danger-light-05: #F6E6E5;
 
@@ -373,7 +374,13 @@
   --color-button-background-color-primary-disabled: var(--color-neutral-light-60);
   --color-button-color-primary-disabled: var(--color-neutral);
 /**
- * Button Danger
+ * Button Danger Primary
+ */
+  --color-button-primary-background-color-danger: var(--color-danger-dark-5);
+  --color-button-primary-background-color-danger-hover: var(--color-feedback-negative-darker);
+  --color-button-primary-background-color-danger-pressed: var(--color-danger-dark-40);
+/**
+ * Button Danger Secondary
  */
   --color-button-background-color-danger: var(--color-transparent);
   --color-button-border-danger: var(--color-danger-dark-5);
