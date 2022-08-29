@@ -1078,38 +1078,46 @@ po-button {
   --color-progress-bar-background-color-default: var(--color-tertiary);
   --color-progress-bar-background-color-success: var(--color-success);
   --color-progress-bar-background-color-error: var(--color-danger);
+}
 
 /*------------------------------------*\
   RADIO
 \*------------------------------------*/
 
---color-radio-background-color: var(--color-white);
---color-radio-background-color-active: var(--color-secondary);
---color-radio-background-color-disabled: var(--color-neutral-light-60);
---color-radio-box-shadow-color-focusable: var(--color-secondary-dark-80);
+po-radio {
+  --color-unchecked: var(--color-white);
+  --border-color: var(--color-neutral-dark-70);
 
---color-radio-border-input: var(--color-neutral-dark-70);
---color-radio-border-input-active: var(--color-secondary);
---color-radio-border-input-disabled: var(--color-neutral-dark-70);
---color-radio-border-input-invalid: var(--danger-color);
---color-radio-hover-active: var(--color-secondary-light-20);
+  /* hover */
+  --shadow-color-hover: var(--color-secondary-light-20);
+  --color-hover: var(--color-secondary-dark-20);
 
---color-radio-color-active: var(--color-secondary);
+  /* focus */
+  --outline-color-focused: var(--color-secondary-dark-80);
 
+  /* checked */
+  --color-checked: var(--color-secondary);
+
+  /* disabled */
+  --color-unchecked-disabled: var(--color-neutral-light-60);
+  --color-checked-disabled: var(--color-neutral-dark-70);
+}
+
+:root {
 /*------------------------------------*\
   RADIO-GROUP
 \*------------------------------------*/
 
-  --color-radio-group-background-color: var(--color-white);
-  --color-radio-group-background-color-active: var(--color-primary);
-  --color-radio-group-background-color-input-disabled: var(--color-neutral-light-90);
+  --color-radio-group-background-color: var(--color-unchecked); /* Deprecated v16.x.x utilizar --color-unchecked */
+  --color-radio-group-background-color-active: var(--color-checked); /* Deprecated v16.x.x utilizar --color-checked */
+  --color-radio-group-background-color-input-disabled: var(--color-unchecked-disabled); /* Deprecated v16.x.x utilizar --color-unchecked-disabled */
 
-  --color-radio-group-border-color: var(--color-neutral-light-60);
-  --color-radio-group-border-color-focusable: var(--color-primary-dark-20);
+  --color-radio-group-border-color: var(--border-color); /* Deprecated v16.x.x utilizar --border-color */
+  --color-radio-group-border-color-focusable: var(--outline-color-focused); /* Deprecated v16.x.x utilizar --outline-color-focused */
   --color-radio-group-border-color-input-error: var(--color-danger);
 
   --color-radio-group-color-label-active: var(--color-white);
-  --color-radio-group-color-text-disabled: var(--color-neutral-light-60);
+  --color-radio-group-color-text-disabled: var(--color-checked-disabled); /* Deprecated v16.x.x utilizar --color-checked-disabled */
 
 /*------------------------------------*\
   RICH TEXT
