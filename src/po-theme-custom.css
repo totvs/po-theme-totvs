@@ -143,40 +143,40 @@
 
 :root {
   /* Cor do background da linha da tabela */
-  --color-primary-light-95: #f3fafc;
+  --color-primary-light-95:  var(--color-brand-01-lightest);
 
   /* Borda inferior da Table Header */
-  --color-primary-light-80: #ceeaf2;
+  --color-primary-light-80: var(--color-brand-01-lighter);
 
   /* Scroll (opacidade de 50%) */
   --color-primary-alpha-50: rgba(12, 154, 190, 0.5);
 
   /* Botão primário, Links, Cor da borda do input selecionado, Cor da borda do botão secundário */
-  --color-primary: #0c9abe;
+  --color-primary: var(--color-action-default);
 
   /* Hover do Botão primário, Links, Cor da borda do botão secundário */
-  --color-primary-dark-20: #097b98;
+  --color-primary-dark-20: var(--color-brand-01-dark);
 
   /* Pressed do Botão primário, Links, Cor da borda do botão secundário */
-  --color-primary-dark-40: #075c72;
+  --color-primary-dark-40: var(--color-brand-01-darker);
 
   /* Secondary */
   --color-secondary-light-20: var(--color-brand-01-lighter); /*Deprecated v16.x.x utilizar --color-brand-01-lighter*/;
 
   --color-secondary-light-40: var(--color-brand-01-light); /*Deprecated v16.x.x utilizar --color-brand-01-light*/;
 
-  --color-secondary: var(--color-action-default); /*Deprecated v16.x.x utilizar --color-action-default*/;
+  --color-secondary: #0d729c;
 
-  --color-secondary-dark-20: var(--color-brand-01-dark); /*Deprecated v16.x.x utilizar --color-brand-01-dark*/;
+  --color-secondary-dark-20: #0a5b7c;
 
-  --color-secondary-dark-40: var(--color-brand-01-darker); /*Deprecated v16.x.x utilizar --color-brand-01-darker*/;
+  --color-secondary-dark-40: #07445d;
 
   /* Overlay de Modal e Menu (70% de opacidade) */
   --color-secondary-dark-60-alpha-70: rgba(5, 45, 62, 0.7);
 
-  --color-secondary-dark-60: #3b1c4a;
+  --color-secondary-dark-60: #052d3e;
 
-  --color-secondary-dark-80: var(--color-brand-01-darkest); /*Deprecated v16.x.x utilizar --color-brand-01-darkest*/;
+  --color-secondary-dark-80: var(--color-brand-01-darkest); /* Deprecated v16.x.x utilizar --color-brand-01-darkest*/;
 
   /* Tertiary */
 
@@ -414,22 +414,22 @@ po-button {
   --background-danger-pressed: var(--color-danger-light-05);
   --background-color-button-danger: var(--color-transparent);
   --text-color: var(--color-white);
-  --color: var(--color-secondary);
+  --color: var(--color-primary);
   --background-color: var(--color-transparent);
   --border-color: var(--color-transparent);
   --shadow: var(--shadow-none);
 
   /* hover */
   --color-hover: var(--color-action-hover);
-  --background-hover: var(--color-secondary-light-20);
-  --border-color-hover: var(--color-secondary-dark-80);
+  --background-hover: var(--color-primary-light-80);
+  --border-color-hover: var(--color-brand-01-darkest);
 
   /* focused */
   --outline-color-focused: var(--color-outline-focused);
 
   /* pressed */
   --color-pressed: var(--color-action-pressed);
-  --background-pressed: var(--color-secondary-light-40);
+  --background-pressed: var(--color-brand-01-light);
 
   /* disabled */
   --text-color-disabled: var(--color-neutral-dark-70);
@@ -554,16 +554,16 @@ po-button {
   BUTTON GROUP
 \*------------------------------------*/
 
---color-button-group-background-selected: var(--color-secondary-dark-40);
---color-button-group-border-selected: var(--color-secondary-dark-40);
+--color-button-group-background-selected: var(--color-primary-dark-40);
+--color-button-group-border-selected: var(--color-primary-dark-40);
 --color-button-group-color-selected: var(--color-white);
 
 --color-button-group-background-color-neutral-hover: var(--color-brand-01-dark);
 --color-button-group-border-neutral-hover: var(--color-brand-01-dark);
 --color-button-group-color-neutral-hover: var(--color-white);
 
---color-button-group-background-color-neutral-pressed: var(--color-secondary-dark-40);
---color-button-group-border-neutral-pressed: var(--color-secondary-dark-40);
+--color-button-group-background-color-neutral-pressed: var(--color-primary-dark-40);
+--color-button-group-border-neutral-pressed: var(--color-primary-dark-40);
 --color-button-group-color-neutral-pressed: var(--color-white);
 
 --color-button-group-background-color-neutral-disabled: var(--color-transparent);
@@ -619,17 +619,17 @@ po-button {
 \*------------------------------------*/
 
   --color-checkbox-background-color: var(--color-white);
-  --color-checkbox-background-color-active: var(--color-secondary);
+  --color-checkbox-background-color-active: var(--color-primary);
   --color-checkbox-background-color-disabled: var(--color-neutral-light-60);
   --color-checkbox-background-color-icon-disabled: var(--color-white);
-  --color-checkbox-box-shadow-color-focusable: var(--color-secondary-dark-80);
+  --color-checkbox-box-shadow-color-focusable: var(--color-brand-01-darkest);
 
   --color-checkbox-border-input: var(--color-neutral);
-  --color-checkbox-border-input-active: var(--color-secondary-dark-20);
+  --color-checkbox-border-input-active: var(--color-primary-dark-20);
   --color-checkbox-border-input-disabled: var(--color-neutral);
   --color-checkbox-border-input-invalid: var(--color-danger);
   --color-checkbox-background-color-active-disabled: var(--color-neutral);
-  --color-checkbox-hover-active: var(--color-secondary-light-20);
+  --color-checkbox-hover-active: var(--color-primary-light-80);
 
   --color-checkbox-color-active: var(--color-white);
 
@@ -797,9 +797,9 @@ input.po-input {
   --background: var(--color-neutral-light-98);
   --padding: 0 0.5rem;
   --text-color: var(--color-neutral-dark-60);
-  --color-hover: var(--color-secondary-dark-20);
+  --color-hover: var(--color-primary-dark-20);
   --background-hover: var(--color-brand-01-lightest);
-  --color-focused: var(--color-secondary);
+  --color-focused: var(--color-primary);
   --outline-color-focused: var(--color-outline-focused);
   --color-disabled: var(--color-neutral-light-60);
   --background-disabled: var(--color-neutral-light-80);
@@ -868,10 +868,10 @@ po-link {
   MENU
 \*------------------------------------*/
 
-  --color-menu-color-menu-collapse-icon: var(--color-primary);
-  --color-menu-color-menu-item-text: var(--color-primary);
+  --color-menu-color-menu-collapse-icon: var(--color-primary-light-95);
+  --color-menu-color-menu-item-text: var(--color-primary-light-95);
   --color-menu-color-menu-item-selected: var(--color-white);
-  --color-menu-color-menu-sub-item-text: var(--color-primary);
+  --color-menu-color-menu-sub-item-text: var(--color-primary-light-95);
   --color-menu-color-menu-sub-item-selected: var(--color-white);
   --color-menu-color-menu-responsive: var(--color-primary);
 
@@ -894,7 +894,7 @@ po-link {
   MENU FILTER
 \*------------------------------------*/
 
-  --color-menu-filter-color-icon: var(--color-primary);
+  --color-menu-filter-color-icon: var(--color-primary-light-95);
   --color-menu-filter-color-text: var(--color-white);
 
   --color-menu-filter-background-color: var(--color-black-alpha-30);
@@ -1135,14 +1135,14 @@ po-radio {
   --border-color: var(--color-neutral-dark-70);
 
   /* hover */
-  --shadow-color-hover: var(--color-secondary-light-20);
-  --color-hover: var(--color-secondary-dark-20);
+  --shadow-color-hover: var(--color-primary-light-80);
+  --color-hover: var(--color-primary-dark-20);
 
   /* focus */
-  --outline-color-focused: var(--color-secondary-dark-80);
+  --outline-color-focused: var(--color-brand-01-darkest);
 
   /* checked */
-  --color-checked: var(--color-secondary);
+  --color-checked: var(--color-primary);
 
   /* disabled */
   --color-unchecked-disabled: var(--color-neutral-light-60);
@@ -1191,10 +1191,10 @@ po-select {
 
   --text-color: var(--color-neutral-dark-60);
 
-  --color-hover: var(--color-secondary-dark-20);
+  --color-hover: var(--color-primary-dark-20);
   --background-hover: var(--color-brand-01-lightest);
 
-  --color-focused: var(--color-secondary);
+  --color-focused: var(--color-primary);
   --outline-color-focused: var(--color-outline-focused);
 
   --color-disabled: var(--color-neutral-light-60);
@@ -1251,8 +1251,8 @@ po-switch {
   --border-color: var(--color-neutral-dark-70);
   --track-unchecked: var(--color-neutral-light-80);
 
-  --color-checked: var(--color-secondary);
-  --track-checked: var(--color-secondary-light-40);
+  --color-checked: var(--color-primary);
+  --track-checked: var(--color-brand-01-light);
 
   --color-unchecked-hover: var(--color-brand-01-lightest);
   --color-checked-hover: var(--color-action-hover);
@@ -1403,10 +1403,10 @@ po-textarea {
 
   --text-color: var(--color-neutral-dark-60);
 
-  --color-hover: var(--color-secondary-dark-20);
+  --color-hover: var(--color-primary-dark-20);
   --background-hover: var(--color-brand-01-lightest);
 
-  --color-focused: var(--color-secondary);
+  --color-focused: var(--color-primary);
 
   --outline-color-focused: var(--color-outline-focused);
 
