@@ -1202,11 +1202,9 @@ po-switch {
   --color-switch-box-shadow-color-focusable: var(--outline-color-focused); /*Deprecated v16.x.x utilizar --outline-color-focused*/
 
   --color-switch-background-color-button: var(--color-unchecked); /*Deprecated v16.x.x utilizar --color-unchecked */
-  --color-switch-background-color-button-disabled: var(--color-unchecked-disabled); /*Deprecated v16.x.x utilizar --color-neutral-light-40 */
+  --color-switch-background-color-button-disabled: var(--color-unchecked-disabled); /*Deprecated v16.x.x utilizar --color-unchecked-disabled */
 
   --color-switch-color-icon-on: var(--color-unchecked); /*Deprecated v16.x.x utilizar --color-unchecked */
-  --color-switch-color-icon-off: var(--color-unchecked); /*Deprecated v16.x.x */
-  --color-switch-color-icon-disabled: var(--color-unchecked); /*Deprecated v16.x.x */
 
   --color-switch-color-label: var(--color-neutral-dark-70); /*Deprecated v16.x.x utilizar --color-neutral-dark-70 */
 
