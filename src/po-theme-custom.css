@@ -34,6 +34,7 @@
  * Field Icon..................variáveis do Field Icon.
  * Gauge.......................variáveis do Gauge.
  * Info........................variáveis do Info.
+ * Link........................variáveis do Link.
  * Input.......................variáveis do Input.
  * List View...................variáveis do List View.
  * Loading.....................variáveis do Loading.
@@ -814,11 +815,25 @@ input.po-input {
   --color-input-color-disabled: var(--text-color-disabled);
   --color-input-text-error: var(--color-danger);
   --color-input-text-placeholder: var(--text-color-placeholder);
+}
 
+/*------------------------------------*\
+  LINK
+\*------------------------------------*/
+
+po-link {
+  --font-family: var(--font-family-theme);
+  --text-color: var(--color-action-default);
+
+  --text-color-hover: var(--color-action-hover);
+  --text-color-pressed: var(--color-action-pressed);
+  --outline-color-focused: var(--color-action-focus);
+  --text-color-visited: var(--color-action-pressed);
+}
 /*------------------------------------*\
   LIST VIEW
 \*------------------------------------*/
-
+:root {
   --color-list-view-background-color: var(--color-white);
   --color-list-view-border: var(--color-neutral-light-90);
   --color-list-view-color-primary: var(--color-primary);
