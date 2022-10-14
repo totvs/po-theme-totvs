@@ -161,10 +161,6 @@
   --color-primary-dark-40: var(--color-brand-01-darker);
 
   /* Secondary */
-  --color-secondary-light-20: var(--color-brand-01-lighter); /*Deprecated v16.x.x utilizar --color-brand-01-lighter*/;
-
-  --color-secondary-light-40: var(--color-brand-01-light); /*Deprecated v16.x.x utilizar --color-brand-01-light*/;
-
   --color-secondary: #0d729c;
 
   --color-secondary-dark-20: #0a5b7c;
@@ -175,8 +171,6 @@
   --color-secondary-dark-60-alpha-70: rgba(5, 45, 62, 0.7);
 
   --color-secondary-dark-60: #052d3e;
-
-  --color-secondary-dark-80: var(--color-brand-01-darkest); /* Deprecated v16.x.x utilizar --color-brand-01-darkest*/;
 
   /* Tertiary */
 
