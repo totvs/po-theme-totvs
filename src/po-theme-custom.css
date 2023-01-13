@@ -337,11 +337,11 @@
    * é atribuído um @font-face específico. Os nomes elencados no `font-family` no @font-face devem ser os mesmos atribuídos como valor para as variáveis.
    */
   /* --font-family: NunitoSans; */
-  --font-family-theme: NunitoSans;
-  --font-family-theme-bold: NunitoSans-Bold;
-  --font-family-theme-extra-light: NunitoSans-ExtraLight;
+  --font-family-theme: NunitoSans, sans-serif;
+  --font-family-theme-bold: NunitoSans-Bold, sans-serif;
+  --font-family-theme-extra-light: NunitoSans-ExtraLight, sans-serif;
 
-  --font-family-heading: NunitoSans;
+  --font-family-heading: NunitoSans, sans-serif; 
   --font-family-code: Monospace;
   --font-weight-extra-light: 200;
   --text-transform-normal: normal;
