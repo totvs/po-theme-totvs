@@ -112,17 +112,17 @@
   --color-brand-01-darkest: #00182B;
   --color-brand-02-base: #045B8F;
   --color-brand-03-base: #29b6c5;
-  --color-neutral-dark-70: #4a5c60;
-  --color-neutral-dark-80: #2c3739;
-  --color-neutral-dark-90: #1d2426;
-  --color-neutral-dark-95: #0b0e0e;
-  --color-neutral-light-10: #eceeee;
-  --color-neutral-light-20: #dadedf;
-  --color-neutral-light-30: #b6bdbf;
-  --color-neutral-light-00: #fff;
-  --color-neutral-light-05: #fbfbfb;
-  --color-neutral-mid-40: #9da7a9;
-  --color-neutral-mid-60: #6e7c7f;
+  --color-neutral-dark-70: #4D4D4D;
+  --color-neutral-dark-80: #363636;
+  --color-neutral-dark-90: #1A1A1A;
+  --color-neutral-dark-95: #0D0D0D;
+  --color-neutral-light-00: #FFFFFF;
+  --color-neutral-light-05: #F2F2F2;
+  --color-neutral-light-10: #E5E5E5;
+  --color-neutral-light-20: #CCCCCC;
+  --color-neutral-light-30: #B2B2B2;
+  --color-neutral-mid-40: #999999;
+  --color-neutral-mid-60: #666666;
 }
 
 /*------------------------------------*\
@@ -1079,13 +1079,26 @@ po-item-list:is([p-type='option'], [p-type='check']) {
 
   --color-menu-panel-color-menu-item-text: var(--color-primary);
   --color-menu-panel-color-menu-item-selected: var(--color-white);
+}
+
+po-modal {
+  --border-radius: var(--border-radius-md);
+  --border-width: var(--border-width-sm);
+  --border-color: var(--color-neutral-light-80);
+  --background: var(--color-white);
+  --shadow: var(--shadow-md);
+  --color-overlay: var(--color-neutral-dark-40);
+  --opacity-overlay: 0.7;
+  --color-divider: var(--color-neutral-light-80)
+}
 
   /*------------------------------------*\
     MODAL
   \*------------------------------------*/
-
-  --color-modal-background-color-content: var(--color-white);
-  --color-modal-color-overlay: var(--color-secondary-dark-60-alpha-70);
+:root {
+  --color-modal-background-color-content: var(--background); /*Deprecated v16.x.x utilizar --background*/
+  --color-modal-color-overlay: var(--color-overlay); /*Deprecated v16.x.x utilizar --color-overlay*/
+  --shadow-modal-content: var(--shadow); /*Deprecated v16.x.x utilizar --shadow*/
 
   /*------------------------------------*\
     MODAL PASSWORD RECOVERY
