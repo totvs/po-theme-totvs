@@ -797,7 +797,6 @@ po-divider {
     DROPDOWN
   \*------------------------------------*/
 
-  --color-dropdown-button-background-color: var(--color-transparent);
   --color-dropdown-button-color: var(--color-primary);
   --color-dropdown-button-border-color: var(--color-primary);
 
