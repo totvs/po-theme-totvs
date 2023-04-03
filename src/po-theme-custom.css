@@ -662,25 +662,49 @@ po-button {
    */
 
   --color-chart-line-point-fill: var(--color-white);
-
+}
   /*------------------------------------*\
     CHECKBOX
   \*------------------------------------*/
 
-  --color-checkbox-background-color: var(--color-white);
-  --color-checkbox-background-color-active: var(--color-primary);
-  --color-checkbox-background-color-disabled: var(--color-neutral-light-60);
-  --color-checkbox-background-color-icon-disabled: var(--color-white);
-  --color-checkbox-box-shadow-color-focusable: var(--color-brand-01-darkest);
+  po-checkbox {
+    --border-color: var(--color-neutral);
+    --color-unchecked: var(--color-white);
+  
+    --color-checked: var(--color-primary);
+  
+    --color-hover: var(--color-action-hover);
+    --shadow-color-hover: var(--color-primary-light-80);
+  
+    --outline-color-focused: var(--color-outline-focused);
+  
+    --color-unchecked-disabled: var(--color-action-disabled);
+  
+    --color-checked-disabled: var(--color-neutral);
+  }
 
-  --color-checkbox-border-input: var(--color-neutral);
-  --color-checkbox-border-input-active: var(--color-primary-dark-20);
-  --color-checkbox-border-input-disabled: var(--color-neutral);
-  --color-checkbox-border-input-invalid: var(--color-danger);
-  --color-checkbox-background-color-active-disabled: var(--color-neutral);
-  --color-checkbox-hover-active: var(--color-primary-light-80);
-
-  --color-checkbox-color-active: var(--color-white);
+  :root {
+    --color-checkbox-background-color: var(--color-unchecked);
+    /* Deprecated v16.x.x utilizar --color-unchecked */
+    --color-checkbox-background-color-active: var(--color-checked);
+    /* Deprecated v16.x.x utilizar --color-checked */
+    --color-checkbox-background-color-disabled: var(--color-unchecked-disabled);
+    /* Deprecated v16.x.x utilizar --color-unchecked-disabled */
+    --color-checkbox-box-shadow-color-focusable: var(--outline-color-focused);
+    /* Deprecated v16.x.x utilizar --outline-color-focused */
+  
+    --color-checkbox-border-input: var(--border-color);
+    /* Deprecated v16.x.x utilizar --border-color */
+    --color-checkbox-border-input-active: var(--color-hover);
+    /* Deprecated v16.x.x utilizar --border-color */
+    --color-checkbox-border-input-disabled: var(--color-checked-disabled);
+    /* Deprecated v16.x.x utilizar --color-hover */
+    --color-checkbox-border-input-invalid: var(--color-danger);
+    /* Deprecated v16.x.x utilizar --color-danger */
+    --color-checkbox-background-color-active-disabled: var(--color-checked-disabled);
+    /* Deprecated v16.x.x utilizar --color-checked-disabled */
+    --color-checkbox-hover-active: var(--shadow-color-hover);
+    /* Deprecated v16.x.x utilizar --shadow-color-hover */
 
   /*------------------------------------*\
     CHECKBOX GROUP
@@ -792,45 +816,20 @@ po-divider {
 
   --color-divider-label-color: var(--color-tertiary);
   --color-divider-line-color: var(--color); /*Deprecated v16.x.x utilizar --color*/
-}
 
-po-dropdown {
-  --font-family: var(--font-family-theme);
-  --font-size: var(--font-size-default);
-  --font-weight: var(--font-weight-bold);
-  --line-height: var(--line-height-none);
-  --color: var(--color-primary);
-  --border-radius: var(--border-radius-md);
-  --border-width: var(--border-width-md);
-  --padding: 0 1em;
-
-  /* hover */
-  --color-hover: var(--color-brand-01-darkest);
-  --background-hover: var(--color-primary-light-80);
-
-  /* focus */
-  --outline-color-focused: var(--color-outline-focused);
-
-  /* pressed */
-  --background-pressed: var(--color-brand-01-light);
-
-  /* disabled */
-  --color-disabled: var(--color-action-disabled);
-}
-
-:root{
   /*------------------------------------*\
     DROPDOWN
   \*------------------------------------*/
 
-  --color-dropdown-button-color: var(--color); /* Deprecated v16.x.x utilizar --color */
-  --color-dropdown-button-border-color: var(--color); /* Deprecated v16.x.x utilizar --color */
+  --color-dropdown-button-background-color: var(--color-transparent);
+  --color-dropdown-button-color: var(--color-primary);
+  --color-dropdown-button-border-color: var(--color-primary);
 
-  --color-dropdown-button-color-hover: var(--color-hover); /* Deprecated v16.x.x utilizar --color-hover */
-  --color-dropdown-button-border-color-hover: var(--color-hover); /* Deprecated v16.x.x utilizar --color-hover */
+  --color-dropdown-button-color-hover: var(--color-primary-dark-20);
+  --color-dropdown-button-border-color-hover: var(--color-primary-dark-20);
 
-  --color-dropdown-button-color-disabled: var(--color-disabled); /* Deprecated v16.x.x utilizar --color-action-disabled */
-  --color-dropdown-button-border-color-disabled: var(--color-disabled); /* Deprecated v16.x.x utilizar --color-action-disabled */
+  --color-dropdown-button-color-disabled: var(--color-neutral-light-60);
+  --color-dropdown-button-border-color-disabled: var(--color-neutral-light-60);
 
   /*------------------------------------*\
     FIELD CONTAINER
