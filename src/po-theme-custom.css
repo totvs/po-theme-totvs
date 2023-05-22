@@ -670,16 +670,16 @@ po-button {
   po-checkbox {
     --border-color: var(--color-neutral);
     --color-unchecked: var(--color-white);
-  
+
     --color-checked: var(--color-primary);
-  
+
     --color-hover: var(--color-action-hover);
     --shadow-color-hover: var(--color-primary-light-80);
-  
+
     --outline-color-focused: var(--color-outline-focused);
-  
+
     --color-unchecked-disabled: var(--color-action-disabled);
-  
+
     --color-checked-disabled: var(--color-neutral);
   }
 
@@ -692,7 +692,7 @@ po-button {
     /* Deprecated v16.x.x utilizar --color-unchecked-disabled */
     --color-checkbox-box-shadow-color-focusable: var(--outline-color-focused);
     /* Deprecated v16.x.x utilizar --outline-color-focused */
-  
+
     --color-checkbox-border-input: var(--border-color);
     /* Deprecated v16.x.x utilizar --border-color */
     --color-checkbox-border-input-active: var(--color-hover);
@@ -1644,6 +1644,20 @@ po-tag {
   /* info */
   --color-info: var(--color-feedback-info-lightest);
   --text-color-info: var(--color-feedback-info-dark);
+
+  /* removable */
+  --color: var(--color-primary-light-95);
+  --border-color: var(--color-primary-light-80);
+  --color-icon: var(--color-primary);
+  --text-color: var(--color-neutral-dark-80);
+  --color-hover: var(--color-primary-light-80);
+  --outline-color-focused: var(--color-outline-focused);
+
+  /* disable */
+  --color-disabled: var(--color-neutral-light-80);
+  --border-color-disabled: var(--color-action-disabled);
+  --color-icon-disabled: var(--color-action-disabled);
+  --text-color-disabled: var(--color-neutral-mid-60);
 }
 
   :root {
