@@ -1054,44 +1054,138 @@ po-item-list:is([p-type='option'], [p-type='check']) {
   --color-lookup-search-border-text: var(--color-neutral-light-60);
   --color-lookup-search-border-text-focusable: var(--color-primary);
   --color-lookup-advanced-search-link-color-text: var(--color-primary);
+}
 
-  /*------------------------------------*\
-    MENU
-  \*------------------------------------*/
+/*------------------------------------*\
+  MENU
+\*------------------------------------*/
+po-menu {
+  --border-radius: var(--border-radius-md);
+  --border-color: var(--color-neutral-light-80);
+  --background-color: var(--color-neutral-light-98);
 
+  /* Menu Footer */
+  --color: var(--color-primary);
+  --font-size: var(--font-size-default);
+  --line-height: var(--line-height-md);
+  --outline-color-focused: var(--color-action-focus);
+  --font-weight-lvl0: var(--font-weight-bold);
+}
+
+/*------------------------------------*\
+  MENU ITEM
+\*------------------------------------*/
+po-menu-item {
+  --font-family: var(--font-family-theme);
+  --font-size: var(--font-size-default);
+  --line-height: var(--line-height-md);
+  --border-radius: var(--border-radius-md);
+  --color: var(--color-primary);
+  --background-color: transparent;
+
+  --color-hover: var(--color-brand-01-darkest);
+  --background-color-hover: var(--color-primary-light-80);
+
+  --outline-color-focused: var(--color-action-focus);
+
+  --background-color-pressed: var(--color-brand-01-light);
+
+  --background-color-actived: var(--color-primary-light-95);
+  --color-actived: var(--color-action-pressed);
+
+  --font-weight-lvl0: var(--font-weight-bold);
+
+  --font-weight-lvl1: var(--font-weight-normal);
+}
+
+:root {
   --color-menu-color-menu-collapse-icon: var(--color-primary-light-95);
-  --color-menu-color-menu-item-text: var(--color-primary-light-95);
-  --color-menu-color-menu-item-selected: var(--color-white);
+
+  --color-menu-color-menu-item-text: var(--color);
+  /*Deprecated v16.x.x utilizar --color*/
+
+  --color-menu-color-menu-item-selected: var(--color-actived);
+  /*Deprecated v16.x.x utilizar --color-actived*/
+
   --color-menu-color-menu-sub-item-text: var(--color-primary-light-95);
+
   --color-menu-color-menu-sub-item-selected: var(--color-white);
-  --color-menu-color-menu-responsive: var(--color-primary);
+
+  --color-menu-color-menu-responsive: var(--color);
+  /*Deprecated v16.x.x utilizar --color*/
 
   --color-menu-background-color-item-grouper-up-hover: var(--color-black-alpha-15);
-  --color-menu-background-color-item-hover: var(--color-black-alpha-15);
-  --color-menu-background-color-item-selected: var(--color-black-alpha-30);
-  --color-menu-background-color-menu: var(--color-neutral-dark-40);
-  --color-menu-background-color-menu-responsive-overlay: var(--color-secondary-dark-60-alpha-70);
+
+  --color-menu-background-color-item-hover: var(--background-color-hover);
+  /*Deprecated v16.x.x utilizar --background-color-hover*/
+
+  --color-menu-background-color-item-selected: var(--background-color-actived);
+  /*Deprecated v16.x.x utilizar --background-color-actived*/
+
+  --color-menu-background-color-menu: var(--background-color);
+  /*Deprecated v16.x.x utilizar --background-color*/
+
+  --color-menu-background-color-menu-responsive-overlay: var(--color-neutral-dark-40);
+  /* nao fazer nada neste token */
+
   --color-menu-background-color-responsive: var(--color-neutral-light-98);
+
   --color-menu-background-color-sub-items: var(--color-black-alpha-15);
+
   --color-menu-background-color-sub-item-selected: var(--color-black-alpha-30);
 
   --color-menu-border-color-menu-item-selected: var(--color-tertiary);
+
   --color-menu-border-left-item: var(--color-transparent);
+
   --color-menu-border-top-item-grouper-up-hover: var(--color-neutral-alpha-45);
+
   --color-menu-border-top-logo: var(--color-neutral-alpha-45);
-  --color-menu-border-top-collapse-button: var(--color-neutral-alpha-45);
 
-  /*------------------------------------*\
-    MENU FILTER
-  \*------------------------------------*/
+  --color-menu-border-top-collapse-button: var(--border-color);
+  /*Deprecated v16.x.x utilizar --border-color*/
+}
 
-  --color-menu-filter-color-icon: var(--color-primary-light-95);
-  --color-menu-filter-color-text: var(--color-white);
+/*------------------------------------*\
+  MENU FILTER
+\*------------------------------------*/
 
-  --color-menu-filter-background-color: var(--color-black-alpha-30);
+po-menu-filter {
+  --font-family: var(--font-family-theme);
+  --font-size: var(--font-size-default);
+  --text-color-placeholder: var(--color-neutral-light-60);
+  --color: var(--color-neutral);
+  --border-radius: var(--border-radius-md);
+  --background: var(--color-neutral-light-98);
 
-  --color-menu-filter-border: var(--color-neutral-alpha-45);
-  --color-menu-filter-border-focusable: var(--color-neutral);
+  --text-color: var(--color-neutral-dark-60);
+
+  --color-icon-read: var(--color-neutral-dark-70);
+
+  --color-clear: var(--color-primary);
+
+  --color-hover: var(--color-action-hover);
+  --background-hover: var(--color-primary-light-95);
+
+  --color-focused: var(--color-primary);
+  --outline-color-focused: var(--color-outline-focused);
+}
+
+:root {
+  --color-menu-filter-color-icon: var(--color-icon-read);
+  /*Deprecated v16.x.x utilizar --color-icon-read*/
+
+  --color-menu-filter-color-text: var(--text-color);
+  /*Deprecated v16.x.x utilizar --text-color*/
+
+  --color-menu-filter-background-color: var(--background);
+  /*Deprecated v16.x.x utilizar --background*/
+
+  --color-menu-filter-border: var(--color);
+  /*Deprecated v16.x.x utilizar --color*/
+
+  --color-menu-filter-border-focusable: var(--color-focused);
+  /*Deprecated v16.x.x utilizar --color-focused*/
 
   /*------------------------------------*\
     MENU PANEL
@@ -1566,100 +1660,100 @@ po-switch {
   po-table {
     --background-color: var(--color-white);
     --color: var(--color-neutral-dark-95);
-  
+
     --font-family: var(--font-family-theme);
-  
+
     --background-striped-color: var(--color-neutral-light-98);
-  
+
     --color-line: var(--color-neutral-light-40);
-  
+
     --background-color-selected: var(--color-primary-light-95);
-  
+
     --background-color-headline: var(--color-neutral-light-90);
-  
+
     --font-weight-headline: var(--font-weight-bold);
-  
+
     --color-hover: var(--color-action-hover);
     --background-color-hover: var(--color-primary-light-80);
-  
+
     --outline-color-focused: var(--color-outline-focused);
-  
+
     --color-actived: var(--color-neutral-dark-60);
     --background-color-actived: var(--color-secondary-light-40);
-  
+
     --color-disabled: var(--color-neutral-light-40);
   }
-  
+
   :root {
     --color-table-background-color-action-hover: var(--color-action-hover);
     /*Deprecated v16.x.x utilizar --color-action-hover*/
-  
+
     --color-table-background-color-active: var(--background-color-actived);
     /*Deprecated v16.x.x utilizar --background-color-actived*/
-  
+
     --color-table-background-color-header: var(--color-neutral-light-90);
     /*Deprecated v16.x.x utilizar --color-neutral-light-90*/
-  
+
     --color-table-background-color-overlay: var(--color-secondary-dark-60-alpha-70);
     /*Deprecated v16.x.x utilizar --color-secondary-dark-60-alpha-70*/
-  
+
     --color-table-background-color-overlay-content: var(--color-white);
     /*Deprecated v16.x.x utilizar ---color-white*/
-  
+
     --color-table-background-color-row-strip: var(--background-striped-color);
     /*Deprecated v16.x.x utilizar --background-striped-color*/
-  
+
     --color-table-background-color-selected: var(--color-brand-01-lightest);
     /*Deprecated v16.x.x utilizar --color-brand-01-lightest*/
-  
+
     --color-table-background-color-table: var(--color-white);
     /*Deprecated v16.x.x utilizar --color-white*/
-  
+
     --color-table-border-rows: var(--color-line);
     /*Deprecated v16.x.x utilizar --color-line*/
-  
+
     --color-table-color-footer-show-subtitle: var(--color-primary);
     /*Deprecated v16.x.x utilizar --color-primary*/
-  
+
     --color-table-background-color-footer-show-subtitle: var(--color-white);
     /*Deprecated v16.x.x utilizar --color-white*/
-  
+
     --color-table-border-footer-show-subtitle: var(--color-neutral-light-90);
     /*Deprecated v16.x.x utilizar --color-neutral-light-90*/
-  
+
     --color-table-box-shadow-footer: var(--color-primary-light-80);
     /*Deprecated v16.x.x utilizar --color-primary-light-80*/
-  
+
     --color-table-box-shadow-overlay-content: var(--color-black-alpha-30);
     /*Deprecated v16.x.x */
-  
+
     --color-table-color-actions: var(--color-primary);
     /*Deprecated v16.x.x */
-  
+
     --color-table-color-header: var(--color);
     /*Deprecated v16.x.x utilizar --color*/
-  
+
     --color-table-color-text: var(--color);
     /*Deprecated v16.x.x utilizar --color*/
-  
+
     --color-table-color-disabled: var(--color-disabled);
     /*Deprecated v16.x.x utilizar --color-disabled*/
-  
+
     --color-table-color-subtitle-text: var(--color-white);
-  
+
     --color-table-color-single-action-hover: var(--color-primary-dark-20);
-  
+
     /*------------------------------------*\
       TABLE COLUMN LINK
     \*------------------------------------*/
-  
+
     --color-table-color-link-disabled: var(--color-neutral-light-80);
   }
-  
+
   po-table-list-manager {
     /* TYPE */
     --color-type: var(--color-neutral);
-  
+
     /* COLUMN TEXT */
     --color-column-text: var(--color-neutral-dark-95);
   }
