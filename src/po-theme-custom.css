@@ -172,6 +172,8 @@
 
   --color-secondary-dark-60: #052d3e;
 
+  --color-secondary-light-40: var(--color-brand-01-light);
+
   /* Tertiary */
 
   /* Cor do background da linha de arquivo em carregamento (Upload) */
@@ -1556,68 +1558,111 @@ po-switch {
   --color-tab-dropdown-background-color-tab-dropdown-button-hover: var(--color-primary-light-95);
 
   --color-tab-dropdown-color-tab-dropdown-button: var(--color-white);
-
+}
   /*------------------------------------*\
     TABLE
   \*------------------------------------*/
 
-  --color-table-background-color-action-hover: var(--color-primary-light-95);
-  --color-table-background-color-actions: var(--color-white);
-  --color-table-background-color-active: var(--color-primary-light-95);
-  --color-table-background-color-detail-content: var(--color-white);
-  --color-table-background-color-footer-show-subtitle: var(--color-white);
-  --color-table-background-color-header: var(--color-white);
-  --color-table-background-color-overlay: var(--color-secondary-dark-60-alpha-70);
-  --color-table-background-color-overlay-content: var(--color-white);
-  --color-table-background-color-row-strip: var(--color-neutral-light-98);
-  --color-table-background-color-scrollbar: var(--color-primary);
-  --color-table-background-color-selected: var(--color-primary);
-  --color-table-background-color-table: var(--color-white);
-  --color-table-background-color-radio: var(--color-white);
-  --color-table-background-color-radio-active: var(--color-primary);
-
-  --color-table-border-footer-show-subtitle: var(--color-neutral-light-90);
-  --color-table-border-select-checkbox: var(--color-neutral-light-60);
-  --color-table-border-selected-checkbox: var(--color-primary);
-  --color-table-border-rows: var(--color-neutral-light-90);
-  --color-table-border-select-radio: var(--color-neutral-light-60);
-  --color-table-border-select-radio-focusable: var(--color-primary-dark-20);
-
-  --color-table-box-shadow-action: var(--color-black-alpha-30);
-  --color-table-box-shadow-checkbox: var(--color-black-alpha-15);
-  --color-table-box-shadow-footer: var(--color-primary-light-80);
-  --color-table-box-shadow-overlay-content: var(--color-black-alpha-30);
-  --color-table-box-shadow-header: var(--color-primary-light-80);
-
-  --color-table-color-actions: var(--color-primary);
-  --color-table-color-detail: var(--color-neutral-light-40);
-  --color-table-color-disabled: var(--color-neutral-light-80);
-  --color-table-color-footer-show-subtitle: var(--color-primary);
-  --color-table-color-header: var(--color-primary);
-  --color-table-color-select: var(--color-white);
-  --color-table-color-subtitle-text: var(--color-white);
-  --color-table-color-single-action-hover: var(--color-primary-dark-20);
-  --color-table-color-text: var(--color-neutral-dark-60);
-
-  /*------------------------------------*\
-    TABLE COLUMN LINK
-  \*------------------------------------*/
-
-  --color-table-color-link: var(--color-primary);
-  --color-table-color-link-disabled: var(--color-neutral-light-80);
-  --color-table-color-link-hover: var(--color-primary-dark-20);
-  --color-table-color-link-pressed: var(--color-primary-dark-40);
-
-  /*------------------------------------*\
-    TABLE COLUMN MANAGER
-  \*------------------------------------*/
-
-  --color-table-column-manager-body-color-background-scrollbar: var(--color-primary);
-  --color-table-column-manager-border-color: var(--color-neutral-light-90);
-  --color-table-column-manager-close-button-color: var(--color-primary);
-  --color-table-column-manager-header-title: var(--color-neutral-dark-60);
-  --color-table-column-manager-outline-color-focus: var(--color-secondary);
-}
+  po-table {
+    --background-color: var(--color-white);
+    --color: var(--color-neutral-dark-95);
+  
+    --font-family: var(--font-family-theme);
+  
+    --background-striped-color: var(--color-neutral-light-98);
+  
+    --color-line: var(--color-neutral-light-40);
+  
+    --background-color-selected: var(--color-primary-light-95);
+  
+    --background-color-headline: var(--color-neutral-light-90);
+  
+    --font-weight-headline: var(--font-weight-bold);
+  
+    --color-hover: var(--color-action-hover);
+    --background-color-hover: var(--color-primary-light-80);
+  
+    --outline-color-focused: var(--color-outline-focused);
+  
+    --color-actived: var(--color-neutral-dark-60);
+    --background-color-actived: var(--color-secondary-light-40);
+  
+    --color-disabled: var(--color-neutral-light-40);
+  }
+  
+  :root {
+    --color-table-background-color-action-hover: var(--color-action-hover);
+    /*Deprecated v16.x.x utilizar --color-action-hover*/
+  
+    --color-table-background-color-active: var(--background-color-actived);
+    /*Deprecated v16.x.x utilizar --background-color-actived*/
+  
+    --color-table-background-color-header: var(--color-neutral-light-90);
+    /*Deprecated v16.x.x utilizar --color-neutral-light-90*/
+  
+    --color-table-background-color-overlay: var(--color-secondary-dark-60-alpha-70);
+    /*Deprecated v16.x.x utilizar --color-secondary-dark-60-alpha-70*/
+  
+    --color-table-background-color-overlay-content: var(--color-white);
+    /*Deprecated v16.x.x utilizar ---color-white*/
+  
+    --color-table-background-color-row-strip: var(--background-striped-color);
+    /*Deprecated v16.x.x utilizar --background-striped-color*/
+  
+    --color-table-background-color-selected: var(--color-brand-01-lightest);
+    /*Deprecated v16.x.x utilizar --color-brand-01-lightest*/
+  
+    --color-table-background-color-table: var(--color-white);
+    /*Deprecated v16.x.x utilizar --color-white*/
+  
+    --color-table-border-rows: var(--color-line);
+    /*Deprecated v16.x.x utilizar --color-line*/
+  
+    --color-table-color-footer-show-subtitle: var(--color-primary);
+    /*Deprecated v16.x.x utilizar --color-primary*/
+  
+    --color-table-background-color-footer-show-subtitle: var(--color-white);
+    /*Deprecated v16.x.x utilizar --color-white*/
+  
+    --color-table-border-footer-show-subtitle: var(--color-neutral-light-90);
+    /*Deprecated v16.x.x utilizar --color-neutral-light-90*/
+  
+    --color-table-box-shadow-footer: var(--color-primary-light-80);
+    /*Deprecated v16.x.x utilizar --color-primary-light-80*/
+  
+    --color-table-box-shadow-overlay-content: var(--color-black-alpha-30);
+    /*Deprecated v16.x.x */
+  
+    --color-table-color-actions: var(--color-primary);
+    /*Deprecated v16.x.x */
+  
+    --color-table-color-header: var(--color);
+    /*Deprecated v16.x.x utilizar --color*/
+  
+    --color-table-color-text: var(--color);
+    /*Deprecated v16.x.x utilizar --color*/
+  
+    --color-table-color-disabled: var(--color-disabled);
+    /*Deprecated v16.x.x utilizar --color-disabled*/
+  
+    --color-table-color-subtitle-text: var(--color-white);
+  
+    --color-table-color-single-action-hover: var(--color-primary-dark-20);
+  
+    /*------------------------------------*\
+      TABLE COLUMN LINK
+    \*------------------------------------*/
+  
+    --color-table-color-link-disabled: var(--color-neutral-light-80);
+  }
+  
+  po-table-list-manager {
+    /* TYPE */
+    --color-type: var(--color-neutral);
+  
+    /* COLUMN TEXT */
+    --color-column-text: var(--color-neutral-dark-95);
+  }
 
 po-tag {
   --border-radius: var(--border-radius-pill);
