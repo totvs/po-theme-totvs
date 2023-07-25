@@ -1250,7 +1250,7 @@ po-modal {
     PAGE
   \*------------------------------------*/
 
-  --color-page-background-color-page: var(--color-neutral-light-98);
+  --color-page-background-color-page: var(--color-white);
 
   /*------------------------------------*\
     PAGE BACKGROUND
