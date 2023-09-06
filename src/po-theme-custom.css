@@ -818,20 +818,50 @@ po-divider {
 
   --color-divider-label-color: var(--color-tertiary);
   --color-divider-line-color: var(--color); /*Deprecated v16.x.x utilizar --color*/
+}
 
+po-dropdown {
+  --font-family: var(--font-family-theme);
+  --font-size: var(--font-size-default);
+  --font-weight: var(--font-weight-bold);
+  --line-height: var(--line-height-none);
+  --color: var(--color-primary);
+  --border-radius: var(--border-radius-md);
+  --border-width: var(--border-width-md);
+  --padding: 0 1em;
+
+  /* hover */
+  --color-hover: var(--color-outline-focused);
+  --background-hover: var(--color-brand-01-lighter);
+
+  /* focus */
+  --outline-color-focused: var(--color-outline-focused);
+
+  /* pressed */
+  --background-pressed: var(--color-secondary-light-40);
+
+  /* disabled */
+  --color-disabled: var(--color-action-disabled);
+}
+
+:root {
   /*------------------------------------*\
     DROPDOWN
   \*------------------------------------*/
 
-  --color-dropdown-button-background-color: var(--color-transparent);
-  --color-dropdown-button-color: var(--color-primary);
-  --color-dropdown-button-border-color: var(--color-primary);
 
-  --color-dropdown-button-color-hover: var(--color-primary-dark-20);
-  --color-dropdown-button-border-color-hover: var(--color-primary-dark-20);
+  --color-dropdown-button-color: var(--color); /* Deprecated v16.x.x utilizar --color */
+  --color-dropdown-button-border-color: var(--color); /* Deprecated v16.x.x utilizar --color */
 
-  --color-dropdown-button-color-disabled: var(--color-neutral-light-60);
-  --color-dropdown-button-border-color-disabled: var(--color-neutral-light-60);
+  --color-dropdown-button-color-hover: var(--color-hover); /* Deprecated v16.x.x utilizar --color-hover */
+  --color-dropdown-button-border-color-hover: var(--color-hover); /* Deprecated v16.x.x utilizar --color-hover */
+
+  --color-dropdown-button-color-disabled: var(
+    --color-disabled
+  ); /* Deprecated v16.x.x utilizar --color-action-disabled */
+  --color-dropdown-button-border-color-disabled: var(
+    --color-disabled
+  ); /* Deprecated v16.x.x utilizar --color-action-disabled */
 
   /*------------------------------------*\
     FIELD CONTAINER
