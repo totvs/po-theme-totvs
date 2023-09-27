@@ -584,8 +584,16 @@ po-button {
   /*------------------------------------*\
     BREADCRUMB
   \*------------------------------------*/
+}
 
+po-breadcrumb {
+  --font-family: var(--font-family-theme);
+  --color-icon: var(--color-neutral-mid-60);
+  --color-current-page: var(--color-neutral-mid-60);
+  --color: var(--color-primary);
+}
 
+:root{
   --color-breadcrumb-color-item: var(--color);/*Deprecated v17.x.x utilizar --color */
 
   /*------------------------------------*\
