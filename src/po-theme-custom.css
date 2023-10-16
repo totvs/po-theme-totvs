@@ -667,6 +667,7 @@ po-breadcrumb {
 
   --color-calendar-color-box-foreground: var(--color-neutral);
   --color-calendar-color-box-foreground-selected: var(--color-white);
+  --color-calendar-color-box-foreground-pressed: var(--color-white);
   --color-calendar-color-box-foreground-range: var(--color-primary);
   --color-calendar-color-box-foreground-today: var(--color-primary);
   --color-calendar-color-box-foreground-disabled: var(--color-neutral-light-80);
