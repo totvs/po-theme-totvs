@@ -969,7 +969,7 @@ input.po-input {
   --font-size: var(--font-size-default);
   --text-color-placeholder: var(--color-neutral-light-60);
   --color: var(--color-neutral-dark-70);
-  --background: var(--color-neutral-light-98);
+  --background: var(--color-white);
   --padding: 0 0.5rem;
   --text-color: var(--color-neutral-dark-60);
   --color-hover: var(--color-primary-dark-20);
@@ -1566,7 +1566,7 @@ po-select {
 
   --text-color-empty: var(--color-neutral-light-60);
   --color: var(--color-neutral-dark-70);
-  --background: var(--color-neutral-light-98);
+  --background: var(--color-white);
   --padding-horizontal: 0.5em;
   --padding-vertical: 0.7em;
 
@@ -1884,7 +1884,7 @@ po-textarea {
 
   --text-color-placeholder: var(--color-neutral-light-60);
   --color: var(--color-neutral-dark-70);
-  --background: var(--color-neutral-light-98);
+  --background: var(--color-white);
 
   --text-color: var(--color-neutral-dark-60);
 
