@@ -1243,9 +1243,9 @@ po-modal {
   --color-divider: var(--color-neutral-light-80)
 }
 
-  /*------------------------------------*\
-    MODAL
-  \*------------------------------------*/
+/*------------------------------------*\
+  MODAL
+\*------------------------------------*/
 :root {
   --color-modal-background-color-content: var(--background); /*Deprecated v16.x.x utilizar --background*/
   --color-modal-color-overlay: var(--color-overlay); /*Deprecated v16.x.x utilizar --color-overlay*/
@@ -1258,7 +1258,32 @@ po-modal {
   --color-modal-password-recovery-link-color: var(--color-primary);
   --color-modal-password-recovery-link-color-hover: var(--color-primary-dark-20);
   --color-modal-password-recovery-text-color: var(--color-neutral);
+}
 
+po-multiselect {
+  --font-family: var(--font-family-theme);
+  --font-size: var(--font-size-default);
+  --text-color-placeholder: var(--color-action-disabled);
+  --color: var(--color-neutral);
+  --background: var(--color-neutral-light-98);
+
+  /* hover */
+  --color-hover: var(--color-action-hover);
+  --background-hover: var(--color-brand-01-lightest);
+
+  /* focus */
+  --color-focused: var(--color-secondary);
+  --outline-color-focused: var(--color-outline-focused);
+
+  /* disabled */
+  --color-disabled: var(--color-action-disabled);
+  --background-disabled: var(--color-neutral-light-80);
+
+  /* error */
+  --color-error: var(--color-danger);
+}
+
+:root {
   /*------------------------------------*\
     MULTISELECT
   \*------------------------------------*/
