@@ -961,7 +961,6 @@ po-combo,
 po-lookup,
 po-decimal,
 po-number,
-po-multiselect,
 po-datepicker,
 po-datepicker-range,
 div.po-lookup-filter-content input.po-input,
@@ -1260,12 +1259,15 @@ po-modal {
   --color-modal-password-recovery-text-color: var(--color-neutral);
 }
 
+/*------------------------------------*\
+  MULTISELECT
+\*------------------------------------*/
 po-multiselect {
   --font-family: var(--font-family-theme);
   --font-size: var(--font-size-default);
   --text-color-placeholder: var(--color-action-disabled);
   --color: var(--color-neutral);
-  --background: var(--color-neutral-light-98);
+  --background: var(--color-white);
 
   /* hover */
   --color-hover: var(--color-action-hover);
@@ -1277,20 +1279,13 @@ po-multiselect {
 
   /* disabled */
   --color-disabled: var(--color-action-disabled);
-  --background-disabled: var(--color-neutral-light-80);
+  --background-disabled: var(--color-neutral-light-98);
 
   /* error */
   --color-error: var(--color-danger);
 }
 
 :root {
-  /*------------------------------------*\
-    MULTISELECT
-  \*------------------------------------*/
-
-  --color-multiselect-border-field-focus: var(--color-secondary-dark-20);
-  --color-multiselect-color-primary: var(--color-primary);
-
   /*------------------------------------*\
     NAVBAR
   \*------------------------------------*/
