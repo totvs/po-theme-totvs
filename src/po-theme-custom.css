@@ -1636,24 +1636,20 @@ po-textarea {
   --color-toolbar-color-badge-text: var(--color-neutral-light-00);
   --color-toolbar-color-default: var(--color-action-default);
   --color-toolbar-color-title: var(--color-brand-03-base);
+}
 
   /*------------------------------------*\
     TOOLTIP
   \*------------------------------------*/
-  }
 
-  .po-tooltip {
-    --color: var(--color-neutral-dark-80);
-    --border-radius: var(--border-radius-md);
-    --font-family: var(--font-family-theme);
-    --text-color: var(--color-neutral-light-00);
-  }
+.po-tooltip {
+  --color: var(--color-neutral-dark-80);
+  --border-radius: var(--border-radius-md);
+  --font-family: var(--font-family-theme);
+  --text-color: var(--color-neutral-light-00);
+}
 
 :root {
-
-  --color-tooltip-background-color-balloon: var(--color); /* Deprecated v16.x.x utilizar --color */
-  --color-tooltip-color-text-balloon: var(--text-color); /* Deprecated v16.x.x utilizar --text-color*/
-
   /*------------------------------------*\
     TREEVIEW
   \*------------------------------------*/
