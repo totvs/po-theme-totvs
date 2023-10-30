@@ -200,12 +200,10 @@
   /* Background da página, Background da linha selecionada */
   --color-neutral-light-98: var(--color-neutral-light-05);
   /*Deprecated v16.x.x utilizar --color-neutral-light-05*/
-  ;
 
   /* Borda inferior de item de tabela, Base do Slider, Background do Input inativo */
   --color-neutral-light-90: var(--color-neutral-light-10);
   /*Deprecated v16.x.x utilizar --color-neutral-light-10*/
-  ;
 
   /* Step inativo, Base Switch desligado */
   --color-neutral-light-80: var(--color-neutral-light-20);
@@ -747,12 +745,36 @@ po-breadcrumb {
   --color-checkbox-group-border-input-invalid: var(--color-danger);
 
   --color-checkbox-group-color-active: var(--color-white);
+}
 
   /*------------------------------------*\
     COMBO
   \*------------------------------------*/
 
+po-combo {
+  --font-family: var(--font-family-theme);
+  --font-size: var(--font-size-default);
+  --text-color: var(--color-neutral-dark-60);
+  --text-color-placeholder: var(--color-neutral-light-60);
+  --color: var(--color-neutral-dark-70);
+  --background: var(--color-white);
+  --border-radius: var(--border-width-lg);
+
+  --color-hover: var(--color-secondary-dark-20);
+  --background-hover: var(--color-brand-01-lightest);
+
+  --color-focused: var(--color-secondary);
+  --outline-color-focused: var(--color-outline-focused);
+
+  --color-disabled: var(--color-neutral-light-60);
+  --background-disabled: var(--color-neutral-light-98);
+
+  --color-error: var(--color-feedback-negative-base);
+
+  --text-color-suggestion: var(--color-neutral-mid-60);
+  --background-suggestion: var(--color-brand-01-lightest);
 }
+
 
   /*------------------------------------*\
     CONTAINER
@@ -945,7 +967,6 @@ po-url,
 po-login,
 po-email,
 po-password,
-po-combo,
 po-lookup,
 po-decimal,
 po-number,
@@ -1228,7 +1249,7 @@ po-modal {
   --shadow: var(--shadow-md);
   --color-overlay: var(--color-neutral-dark-40);
   --opacity-overlay: 0.7;
-  --color-divider: var(--color-neutral-light-80)
+  --color-divider: var(--color-neutral-light-80);
 }
 
   /*------------------------------------*\
@@ -1687,7 +1708,7 @@ po-switch {
 
   --color-tab-dropdown-color-tab-dropdown-button: var(--color-white);
 }
-  /*------------------------------------*\
+/*------------------------------------*\
     TABLE
   \*------------------------------------*/
 
@@ -1782,7 +1803,7 @@ po-switch {
     \*------------------------------------*/
 
     --color-table-color-link-disabled: var(--color-neutral-light-80);
-  }
+}
 
   po-table-list-manager {
     /* TYPE */
