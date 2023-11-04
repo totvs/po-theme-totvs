@@ -1412,7 +1412,7 @@ po-table {
   /*Deprecated v17.x.x utilizar --color-secondary-dark-60-alpha-70*/
 
   --color-table-background-color-overlay-content: var(--color-neutral-light-00);
-  /*Deprecated v17.x.x utilizar ---color-white*/
+  /*Deprecated v17.x.x utilizar --color-neutral-light-00*/
 
   --color-table-background-color-row-strip: var(--background-striped-color);
   /*Deprecated v17.x.x utilizar --background-striped-color*/
@@ -1421,7 +1421,7 @@ po-table {
   /*Deprecated v17.x.x utilizar --color-brand-01-lightest*/
 
   --color-table-background-color-table: var(--color-neutral-light-00);
-  /*Deprecated v17.x.x utilizar --color-white*/
+  /*Deprecated v17.x.x utilizar --color-neutral-light-00*/
 
   --color-table-border-rows: var(--color-line);
   /*Deprecated v17.x.x utilizar --color-line*/
@@ -1430,7 +1430,7 @@ po-table {
   /*Deprecated v17.x.x utilizar --color-primary*/
 
   --color-table-background-color-footer-show-subtitle: var(--color-neutral-light-00);
-  /*Deprecated v17.x.x utilizar --color-white*/
+  /*Deprecated v17.x.x utilizar --color-neutral-light-00*/
 
   --color-table-border-footer-show-subtitle: var(--color-neutral-light-10);
   /*Deprecated v17.x.x utilizar --color-neutral-light-10*/
