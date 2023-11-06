@@ -1,4 +1,8 @@
 name: Run publish @totvs/po-theme
+
+env:
+  WORKING_DIR: /home/runner/work/po-theme-totvs/po-theme-totvs
+
 on:
   workflow_dispatch:
 
@@ -28,7 +32,7 @@ jobs:
       with:
         node-version: '16.x'
         registry-url: 'https://registry.npmjs.org'
-    - run: npm publish dist --tag next
+    - run: npm publish ${{WORKING_DIR}}/dist --tag next
       env:
         PACKAGE_VERSION: ${{ steps.package-version.outputs.current-version }}
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
