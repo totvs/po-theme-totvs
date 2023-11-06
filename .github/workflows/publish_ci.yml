@@ -32,7 +32,7 @@ jobs:
       with:
         node-version: '16.x'
         registry-url: 'https://registry.npmjs.org'
-    - run: npm publish ${{WORKING_DIR}}/dist --tag next
+    - run: npm publish ${{env.WORKING_DIR}}/dist --tag next
       env:
         PACKAGE_VERSION: ${{ steps.package-version.outputs.current-version }}
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
