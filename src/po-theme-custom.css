@@ -738,6 +738,38 @@ input.po-input {
 }
 
 /*------------------------------------*\
+  ITEM LIST
+\*------------------------------------*/
+po-item-list {
+  --font-family: var(--font-family-theme);
+  --font-size: var(--font-size-default);
+  --line-height: var(--line-height-md);
+
+  /* action */
+  --font-weight: var(--font-weight-bold);
+  --color: var(--color-secondary);
+
+  --color-hover: var(--color-brand-01-darkest);
+  --background-hover: var(--color-brand-01-lighter);
+
+  --outline-color-focused: var(--color-action-focus);
+
+  --background-pressed: var(--color-brand-01-light);
+
+  --color-disabled: var(--color-action-disabled);
+
+  /* option e check */
+  --color-option: var(--color-neutral-dark-90);
+
+  --font-weight-selected: var(--font-weight-bold);
+  --background-selected: var(--color-brand-01-lightest);
+}
+
+po-item-list:is([p-type='option'], [p-type='check']) {
+  --font-weight: var(--font-weight-normal);
+}
+
+/*------------------------------------*\
   LABEL
 \*------------------------------------*/
 po-label {
@@ -781,38 +813,6 @@ po-listbox {
   --border-color: var(--color-neutral-light-20);
   --background: var(--color-neutral-light-00);
   --shadow: var(--shadow-md);
-}
-
-/*------------------------------------*\
-  ITEM LIST
-\*------------------------------------*/
-po-item-list {
-  --font-family: var(--font-family-theme);
-  --font-size: var(--font-size-default);
-  --line-height: var(--line-height-md);
-
-  /* action */
-  --font-weight: var(--font-weight-bold);
-  --color: var(--color-secondary);
-
-  --color-hover: var(--color-brand-01-darkest);
-  --background-hover: var(--color-brand-01-lighter);
-
-  --outline-color-focused: var(--color-action-focus);
-
-  --background-pressed: var(--color-brand-01-light);
-
-  --color-disabled: var(--color-action-disabled);
-
-  /* option e check */
-  --color-option: var(--color-neutral-dark-90);
-
-  --font-weight-selected: var(--font-weight-bold);
-  --background-selected: var(--color-brand-01-lightest);
-}
-
-po-item-list:is([p-type='option'], [p-type='check']) {
-  --font-weight: var(--font-weight-normal);
 }
 
 /*------------------------------------*\
@@ -1053,6 +1053,17 @@ po-multiselect {
 \*------------------------------------*/
   --color-navbar-item-navigation-color-icon: var(--color-action-default);
   --color-navbar-item-navigation-color-icon-disabled: var(--color-neutral-light-20);
+}
+
+/*------------------------------------*\
+  OVERLAY
+\*------------------------------------*/
+po-overlay {
+  --color-overlay: var(--color-neutral-dark-80);
+  --opacity-overlay: 0.7;
+}
+
+:root {
 
 /*------------------------------------*\
   PAGE
@@ -1063,6 +1074,8 @@ po-multiselect {
   PAGE BACKGROUND
 \*------------------------------------*/
   --color-page-background-select-item-border-color: var(--color-neutral-light-10);
+  --color-navbar-item-navigation-color-icon: var(--color-primary);
+  --color-navbar-item-navigation-color-icon-disabled: var(--color-neutral-light-80);
 
 /*------------------------------------*\
   PAGE BLOCKED USER
