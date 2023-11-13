@@ -36,10 +36,10 @@
  * Gauge..........................variáveis do Gauge.
  * Info...........................variáveis do Info.
  * Input..........................variáveis do Input.
+ * Itemlist.......................variáveis do Itemlist
  * Label..........................variáveis do Label.
  * Link...........................variáveis do Link.
  * Listbox........................variáveis do listbox.
- * Itemlist.......................variáveis do Itemlist
  * List View......................variáveis do List View.
  * Loading........................variáveis do Loading.
  * Loading Overlay................variáveis do Loading Overlay.
@@ -56,6 +56,7 @@
  * Navbar Action Popup............variáveis do Navbar Action Popup.
  * Navbar Item....................variáveis do Navbar Item.
  * Navbar Item Navigation.........variáveis do Navbar Item Navigation.
+ * Overlay........................variáveis do Overlay.
  * Page...........................variáveis do Page.
  * Page Background................variáveis do Page Background.
  * Page Blocked User..............variáveis do Page Blocked User.
@@ -752,14 +753,14 @@ po-item-list {
   --color-hover: var(--color-brand-01-darkest);
   --background-hover: var(--color-brand-01-lighter);
 
-  --outline-color-focused: var(--color-action-focus);
+  --outline-color-focused: var(--color-outline-focused);
 
-  --background-pressed: var(--color-brand-01-light);
+  --background-pressed: var(--color-secondary-light-40);
 
   --color-disabled: var(--color-action-disabled);
 
   /* option e check */
-  --color-option: var(--color-neutral-dark-90);
+  --color-option: var(--color-neutral-dark-60);
 
   --font-weight-selected: var(--font-weight-bold);
   --background-selected: var(--color-brand-01-lightest);
@@ -824,19 +825,38 @@ po-listbox {
   --color-list-view-color-primary: var(--color-action-default);
   --color-list-view-color-primary-hover: var(--color-brand-01-dark);
   --color-list-view-color-select-all-label: var(--color-neutral);
+}
+
 
 /*------------------------------------*\
   LOADING
 \*------------------------------------*/
-  --color-loading-color-label: var(--color-neutral);
+po-loading {
+  --font-family: var(--font-family-theme);
+  --font-weight: var(--font-weight-normal);
+  --text-color: var(--color-neutral-dark-70);
+
+  --border-radius: var(--border-radius-md);
+  --border-width: var(--border-width-sm);
+  --border-color: var(--color-neutral-light-20);
+  --background: var(--color-neutral-light-00);
+  --shadow: var(--shadow-md);
+}
+
+:root {
+  --color-loading-color-label: var(--text-color);
+  /*Deprecated v18.x.x utilizar --text-color*/
   --color-loading-icon-color-neutral: var(--color-neutral-light-20);
   --color-loading-icon-color-primary: var(--color-action-default);
 
-/*------------------------------------*\
-  LOADING OVERLAY
-\*------------------------------------*/
-  --color-loading-overlay-background-color-content: var(--color-neutral-light-00);
-  --color-loading-overlay-box-shadow-content: var(--color-black-alpha-30);
+  /*------------------------------------*\
+    LOADING OVERLAY
+  \*------------------------------------*/
+
+  --color-loading-overlay-background-color-content: var(--background);
+  /*Deprecated v18.x.x utilizar --background*/
+  --color-loading-overlay-box-shadow-content: var(--shadow);
+  /*Deprecated v18.x.x utilizar --shadow*/
 
 /*------------------------------------*\
   LOOKUP
@@ -1074,8 +1094,6 @@ po-overlay {
   PAGE BACKGROUND
 \*------------------------------------*/
   --color-page-background-select-item-border-color: var(--color-neutral-light-10);
-  --color-navbar-item-navigation-color-icon: var(--color-primary);
-  --color-navbar-item-navigation-color-icon-disabled: var(--color-neutral-light-80);
 
 /*------------------------------------*\
   PAGE BLOCKED USER
