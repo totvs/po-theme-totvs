@@ -32,8 +32,8 @@ jobs:
         PACKAGE_VERSION: ${{ steps.package-version.outputs.current-version }}
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-    - name: po-theme-totvs - add "latest" tag
-      run: npm dist-tags add @totvs/po-theme@${{ env.PACKAGE_VERSION }}
+    - name: po-theme-totvs - add "next" tag
+      run: npm dist-tags add @totvs/po-theme@${{ env.PACKAGE_VERSION }} next
       working-directory: ${{env.WORKING_DIR}}
       env:
         PACKAGE_VERSION: ${{ steps.package-version.outputs.current-version }}
