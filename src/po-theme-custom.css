@@ -1306,7 +1306,7 @@ po-search {
   --text-color-placeholder: var(--color-neutral-light-30);
   --color: var(--color-neutral-dark-70);
   --border-radius: var(--border-radius-md);
-  --background: var(--color-neutral-light-05);
+  --background: var(--color-neutral-light-00);
 
   --text-color: var(--color-neutral-dark-90);
 
@@ -1321,7 +1321,7 @@ po-search {
   --outline-color-focused: var(--color-action-focus);
 
   --color-disabled: var(--color-action-disabled);
-  --background-disabled: var(--color-neutral-light-20);
+  --background-disabled: var(--color-neutral-light-05);
 }
 
 /*------------------------------------*\
