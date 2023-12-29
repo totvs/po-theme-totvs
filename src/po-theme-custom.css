@@ -180,13 +180,13 @@
   --color-black: #000000;
 
   /* Background do Feedback de sucesso */
-  --color-success: #00b28e;
+  --color-success-default: #00b28e;
   --color-feedback-positive-lightest: #def7ed;
   --color-feedback-positive-lighter: #7ecead;
   --color-feedback-positive-base: #107048;
 
   /* Background do Feedback de atenção */
-  --color-warning: #ea9b3e;
+  --color-warning-default: #ea9b3e;
   --color-feedback-warning-lightest: #fcf6e3;
   --color-feedback-warning-lighter: #f7dd97;
   --color-feedback-warning-base: #efba2a;
@@ -1186,7 +1186,7 @@ po-overlay {
   --color-page-change-password-color-link: var(--color-action-default);
   --color-page-change-password-color-text: var(--color-neutral);
   --color-page-change-password-color-required: var(--color-neutral);
-  --color-page-change-password-color-required-ok: var(--color-success);
+  --color-page-change-password-color-required-ok: var(--color-success-default);
   --color-page-change-password-color-required-minus: var(--color-black-alpha-30);
   --color-page-change-password-color-required-text: var(--color-secondary-dark-60-alpha-70);
 
@@ -1736,7 +1736,7 @@ po-textarea {
 
   --color-upload-color-progress: var(--color-brand-03-base);
   --color-upload-color-text-load: var(--color-neutral-light-00);
-  --color-upload-background-color-success: var(--color-success);
+  --color-upload-background-color-success: var(--color-success-default);
   --color-upload-background-color-load-progress: var(--color-brand-03-base);
   --color-upload-background-color-error: var(--color-feedback-negative-base);
   --color-upload-color-text-load-waiting: var(--color-neutral);
@@ -1803,39 +1803,82 @@ po-widget {
 /*------------------------------------*\
   SERVICES
 \*------------------------------------*/
-:root {
 /*------------------------------------*\
-  TOASTER
+TOASTER
 \*------------------------------------*/
+po-toaster {
+  --border-radius: var(--border-radius-md);
+  --color-icon: var(--color-neutral-light-00);
+  --shadow: var(--shadow-lg);
+
+  /* Success */
+  --color-success: var(--color-feedback-positive-base);
+  --background-success: var(--color-feedback-positive-lightest);
+  --border-color-success: var(--color-feedback-positive-lighter);
+
+  /* Error */
+  --color-error: var(--color-feedback-negative-base);
+  --background-error: var(--color-feedback-negative-lightest);
+  --border-color-error: var(--color-feedback-negative-lighter);
+
+  /* Warning */
+  --color-warning: var(--color-feedback-warning-base);
+  --color-icon-warning: var(--color-neutral-dark-90);
+  --background-warning: var(--color-feedback-warning-lightest);
+  --border-color-warning: var(--color-feedback-warning-lighter);
+
+  /* Info */
+  --color-info: var(--color-feedback-info-base);
+  --background-info: var(--color-feedback-info-lightest);
+  --border-color-info: var(--color-feedback-info-lighter);
+}
+
+:root {
   /**
    * Toaster Item Success
    */
-  --color-toaster-background-color-success: var(--color-feedback-positive-lightest);
-  --color-toaster-border-color-success: var(--color-feedback-positive-lighter);
-  --color-toaster-icon-background-color-success: var(--color-feedback-positive-base);
-  --color-toaster-icon-color-success: var(--color-neutral-light-00);
+  --color-toaster-background-color-success: var(--background-success);
+  /*Deprecated v18.x.x utilizar --background-success*/
+  --color-toaster-border-color-success: var(--border-color-success);
+  /*Deprecated v18.x.x utilizar --border-color-success*/
+  --color-toaster-icon-background-color-success: var(--color-success);
+  /*Deprecated v18.x.x utilizar --color-success*/
+  --color-toaster-icon-color-success: var(--color-icon);
+  /*Deprecated v18.x.x utilizar --color-icon*/
 
   /**
    * Toaster Item Warning
    */
-  --color-toaster-background-color-warning: var(--color-feedback-warning-lightest);
-  --color-toaster-border-color-warning: var(--color-feedback-warning-lighter);
-  --color-toaster-icon-background-color-warning: var(--color-feedback-warning-base);
-  --color-toaster-icon-color-warning: var(--color-neutral-dark-90);
+  --color-toaster-background-color-warning: var(--background-warning);
+  /*Deprecated v18.x.x utilizar --background-warning*/
+  --color-toaster-border-color-warning: var(--border-color-warning);
+  /*Deprecated v18.x.x utilizar --border-color-warning*/
+  --color-toaster-icon-background-color-warning: var(--color-warning);
+  /*Deprecated v18.x.x utilizar --color-warning*/
+  --color-toaster-icon-color-warning: var(--color-icon-warning);
+  /*Deprecated v18.x.x utilizar --color-icon-warning*/
 
   /**
    * Toaster Item Error
    */
-  --color-toaster-background-color-error: var(--color-feedback-negative-lightest);
-  --color-toaster-border-color-error: var(--color-feedback-negative-lighter);
-  --color-toaster-icon-background-color-error: var(--color-feedback-negative-base);
-  --color-toaster-icon-color-error: var(--color-neutral-light-00);
+  --color-toaster-background-color-error: var(--background-error);
+  /*Deprecated v18.x.x utilizar --background-error*/
+  --color-toaster-border-color-error: var(--border-color-error);
+  /*Deprecated v18.x.x utilizar --border-color-error*/
+  --color-toaster-icon-background-color-error: var(--color-error);
+  /*Deprecated v18.x.x utilizar --color-error*/
+  --color-toaster-icon-color-error: var(--color-icon);
+  /*Deprecated v18.x.x utilizar --color-icon*/
 
   /**
    * Toaster Item Info
    */
-  --color-toaster-background-color-info: var(--color-feedback-info-lightest);
-  --color-toaster-border-color-info: var(--color-feedback-info-lighter);
-  --color-toaster-icon-background-color-info: var(--color-feedback-info-base);
-  --color-toaster-icon-color-info: var(--color-neutral-light-00);
+  --color-toaster-background-color-info: var(--background-info);
+  /*Deprecated v18.x.x utilizar --background-info*/
+  --color-toaster-border-color-info: var(--border-color-info);
+  /*Deprecated v18.x.x utilizar --border-color-info*/
+  --color-toaster-icon-background-color-info: var(--color-info);
+  /*Deprecated v18.x.x utilizar --color-info*/
+  --color-toaster-icon-color-info: var(--color-icon);
+  /*Deprecated v18.x.x utilizar --color-icon*/
 }
