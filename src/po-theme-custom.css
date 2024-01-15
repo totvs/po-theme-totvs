@@ -109,7 +109,9 @@
 
   --color-hr-border-top: var(--color-neutral-light-10);
 
-  --outline-width: var(--border-width-md);
+  --outline-width: 0px;
+  --outline-width-focus-visible: var(--border-width-sm);
+
 }
 
 /*------------------------------------*\
@@ -117,13 +119,13 @@
 \*------------------------------------*/
 
 :root {
-  --color-brand-01-lightest: #D7F0FE;
-  --color-brand-01-lighter: #9CD8FC;
-  --color-brand-01-light: #6BC5FA;
-  --color-brand-01-base: #045B8F;
-  --color-brand-01-dark: #013F65;
-  --color-brand-01-darker: #002944;
-  --color-brand-01-darkest: #00182B;
+  --color-brand-01-lightest: #E1F4FF;
+  --color-brand-01-lighter: #B3E3FE;
+  --color-brand-01-light: #4BC0FB;
+  --color-brand-01-base: #0897E9;
+  --color-brand-01-dark: #0D84D5;
+  --color-brand-01-darker: #0c73c0;
+  --color-brand-01-darkest: #0D529E;
   --color-brand-02-base: #045B8F;
   --color-brand-03-base: #045B8F;
   --color-neutral-dark-70: #4D4D4D;
@@ -149,6 +151,9 @@
   --color-action-pressed: var(--color-brand-01-darker);
   --color-action-disabled: var(--color-neutral-light-30);
   --color-action-focus: var(--color-brand-01-darkest);
+
+  --font-size-default-normal: 16px;
+  --font-family-default-bold: var(--font-family-theme);
 }
 
 /*------------------------------------*\
@@ -227,11 +232,16 @@
    * é atribuído um @font-face específico. Os nomes elencados no `font-family` no @font-face devem ser os mesmos atribuídos como valor para as variáveis.
    */
   /* --font-family: NunitoSans; */
-  --font-family-theme: NunitoSans, sans-serif;
-  --font-family-theme-bold: NunitoSans-Bold, sans-serif;
-  --font-family-theme-extra-light: NunitoSans-ExtraLight, sans-serif;
+  --font-family: Lato;
+  /* --font-family-theme: NunitoSans, sans-serif; */
+  --font-family-theme: Lato, sans-serif;
+  /* --font-family-theme-bold: NunitoSans-Bold, sans-serif; */
+  --font-family-theme-bold: Lato-Bold, sans-serif;
+  /* --font-family-theme-extra-light: NunitoSans-ExtraLight, sans-serif; */
+  --font-family-theme-extra-light: Lato-Light, sans-serif;
 
-  --font-family-heading: NunitoSans, sans-serif;
+  /* --font-family-heading: NunitoSans, sans-serif; */
+  --font-family-heading: Lato, sans-serif;
   --font-family-code: Monospace;
   --font-weight-extra-light: 200;
   --text-transform-normal: normal;
@@ -239,22 +249,28 @@
 }
 
 @font-face {
-  font-family: 'NunitoSans';
-  src: url('./../fonts/Nunito_Sans/NunitoSans-Regular.ttf');
+  /* font-family: 'NunitoSans';
+  src: url('./../fonts/Nunito_Sans/NunitoSans-Regular.ttf'); */
+  font-family: 'Lato';
+  src: url('./../fonts/Lato/Lato-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NunitoSans-Bold';
-  src: url('./../fonts/Nunito_Sans/NunitoSans-Bold.ttf');
+  /* font-family: 'NunitoSans-Bold';
+  src: url('./../fonts/Nunito_Sans/NunitoSans-Bold.ttf'); */
+  font-family: 'Lato-Bold';
+  src: url('./../fonts/Lato/Lato-Bold.ttf');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NunitoSans-ExtraLight';
-  src: url('./../fonts/Nunito_Sans/NunitoSans-ExtraLight.ttf');
+  /* font-family: 'NunitoSans-ExtraLight';
+  src: url('./../fonts/Nunito_Sans/NunitoSans-ExtraLight.ttf'); */
+  font-family: 'Lato-Light';
+  src: url('./../fonts/Lato/Lato-Light.ttf');
   font-weight: 200;
   font-style: normal;
 }
@@ -270,8 +286,8 @@ po-accordion {
   --background-color: var(--color-neutral-light-00);
   --color: var(--color-action-default);
   --font-family: var(--font-family-theme);
-  --font-size: var(--font-size-sm);
-  --font-weight: var(--font-weight-bold);
+  --font-size: var(--font-size-default);
+  --font-weight: var(--font-weight-normal);
 
   --background-hover: var(--color-brand-01-lightest);
   --color-hover: var(--color-action-hover);
@@ -293,8 +309,8 @@ po-accordion-manager {
   --background-color: var(--color-brand-01-lightest);
   --color: var(--color-action-default);
   --font-family: var(--font-family-theme);
-  --font-size: var(--font-size-sm);
-  --font-weight: var(--font-weight-bold);
+  --font-size: var(--font-size-default);
+  --font-weight: var(--font-weight-normal);
 
   --background-pressed: var(--color-brand-01-lighter);
   --color-pressed: var(--color-action-pressed);
@@ -333,10 +349,10 @@ po-accordion-manager {
 po-button {
   --font-family: var(--font-family-theme);
   --font-size: var(--font-size-default);
-  --font-weight: var(--font-weight-bold);
+  --font-weight: var(--font-weight-normal);
   --line-height: var(--line-height-none);
   --border-radius: var(--border-radius-md);
-  --border-width: var(--border-width-md);
+  --border-width: var(--border-width-sm);
   --padding: 0 1em;
 
   /* danger */
@@ -379,7 +395,7 @@ po-badge {
 
   --border-radius: var(--border-radius-md);
   --font-family: var(--font-family-theme);
-  --font-weight: var(--font-weight-bold);
+  --font-weight: var(--font-weight-normal);
 }
 
 po-badge[p-status='disabled'] {
@@ -411,6 +427,7 @@ po-badge[p-status='warning'] {
 }
 po-breadcrumb {
   --font-family: var(--font-family-theme);
+  --font-weight: var(--font-weight-normal);
   --color-icon: var(--color-neutral-mid-60);
   --color-current-page: var(--color-neutral-mid-60);
   --color: var(--color-action-default);
@@ -422,6 +439,7 @@ po-breadcrumb {
 /*------------------------------------*\
   BUTTON GROUP
 \*------------------------------------*/
+  --button-group-container-margin: -1px;
   --color-button-group-background-selected: var(--color-brand-01-darker);
   --color-button-group-border-selected: var(--color-brand-01-darker);
   --color-button-group-color-selected: var(--color-neutral-light-00);
@@ -550,7 +568,7 @@ po-combo {
   --font-size: var(--font-size-default);
   --text-color: var(--color-neutral-dark-90);
   --text-color-placeholder: var(--color-neutral-light-30);
-  --color: var(--color-neutral-dark-70);
+  --color: var(--color-neutral-light-30);
   --background: var(--color-neutral-light-00);
   --border-radius: var(--border-width-lg);
 
@@ -598,7 +616,7 @@ po-disclaimer {
   --border-radius: var(--border-radius-pill);
 
   --font-family: var(--font-family-theme);
-  --font-size: var(--font-size-sm);
+  --font-size: var(--font-size-default);
   --line-height: var(--line-height-sm);
 
   --color-neutral: var(--color-neutral-light-10);
@@ -637,7 +655,7 @@ po-divider {
 po-dropdown {
   --font-family: var(--font-family-theme);
   --font-size: var(--font-size-default);
-  --font-weight: var(--font-weight-bold);
+  --font-weight: var(--font-weight-normal);
   --line-height: var(--line-height-none);
   --color: var(--color-action-default);
   --border-radius: var(--border-radius-md);
@@ -678,7 +696,7 @@ po-dropdown {
 \*------------------------------------*/
 po-field-container-bottom {
   --font-family: var(--font-family-theme);
-  --font-size: var(--font-size-sm);
+  --font-size: var(--font-size-default);
   --line-height: var(--line-height-md);
   --text-color-help: var(--color-neutral-dark-90);
 
@@ -741,7 +759,7 @@ input.po-input {
   --font-family: var(--font-family-theme);
   --font-size: var(--font-size-default);
   --text-color-placeholder: var(--color-neutral-light-30);
-  --color: var(--color-neutral-dark-70);
+  --color: var(--color-neutral-light-30);
   --background: var(--color-neutral-light-00);
   --padding: 0 0.5rem;
   --text-color: var(--color-neutral-dark-90);
@@ -774,7 +792,7 @@ po-item-list {
   --line-height: var(--line-height-md);
 
   /* action */
-  --font-weight: var(--font-weight-bold);
+  --font-weight: var(--font-weight-normal);
   --color: var(--color-secondary);
 
   --color-hover: var(--color-brand-01-darkest);
@@ -789,7 +807,7 @@ po-item-list {
   /* option e check */
   --color-option: var(--color-neutral-dark-60);
 
-  --font-weight-selected: var(--font-weight-bold);
+  --font-weight-selected: var(--font-weight-normal);
   --background-selected: var(--color-brand-01-lightest);
 }
 
@@ -808,11 +826,11 @@ po-label {
   --text-color: var(--color-neutral-dark-90);
 
   /* field */
-  --font-weight-field: var(--font-weight-semibold);
+  --font-weight-field: var(--font-weight-normal);
 
   /* required */
   --text-color-required: var(--color-neutral-dark-70);
-  --font-size-required: var(--font-size-sm);
+  --font-size-required: var(--font-size-default);
   --line-height-required: var(--line-height-sm);
 
   /* disabled */
@@ -824,6 +842,7 @@ po-label {
 \*------------------------------------*/
 po-link {
   --font-family: var(--font-family-theme);
+  --font-weight: var(--font-weight-normal);
   --text-color: var(--color-action-default);
 
   --text-color-hover: var(--color-action-hover);
@@ -911,7 +930,7 @@ po-menu {
   --font-size: var(--font-size-default);
   --line-height: var(--line-height-md);
   --outline-color-focused: var(--color-action-focus);
-  --font-weight-lvl0: var(--font-weight-bold);
+  --font-weight-lvl0: var(--font-weight-normal);
 }
 
 /*------------------------------------*\
@@ -935,7 +954,7 @@ po-menu-item {
   --background-color-actived: var(--color-brand-01-lightest);
   --color-actived: var(--color-action-pressed);
 
-  --font-weight-lvl0: var(--font-weight-bold);
+  --font-weight-lvl0: var(--font-weight-normal);
 
   --font-weight-lvl1: var(--font-weight-normal);
 }
@@ -973,13 +992,13 @@ po-menu-filter {
   --font-family: var(--font-family-theme);
   --font-size: var(--font-size-default);
   --text-color-placeholder: var(--color-neutral-light-30);
-  --color: var(--color-neutral);
+  --color: var(--color-neutral-light-30);
   --border-radius: var(--border-radius-md);
   --background: var(--color-neutral-light-00);
 
   --text-color: var(--color-neutral-dark-90);
 
-  --color-icon-read: var(--color-neutral-dark-70);
+  --color-icon-read: var(--color-brand-01-dark);
 
   --color-clear: var(--color-action-default);
 
@@ -1056,7 +1075,8 @@ po-multiselect {
   --font-family: var(--font-family-theme);
   --font-size: var(--font-size-default);
   --text-color-placeholder: var(--color-action-disabled);
-  --color: var(--color-neutral);
+  --color: var(--color-neutral-light-30);
+  --color-icon: var(--color-brand-01-dark);
   --background: var(--color-neutral-light-00);
 
   /* hover */
@@ -1189,6 +1209,7 @@ po-page-slide {
   --opacity-overlay: 0.7;
 
   --font-family: var(--font-family-heading);
+  --font-weight: var(--font-weight-normal);
   --color-title: var(--color-neutral-dark-95);
 }
 
@@ -1227,7 +1248,7 @@ po-popup po-item-list {
   --line-height: var(--line-height-md);
 
   /* action */
-  --font-weight: var(--font-weight-bold);
+  --font-weight: var(--font-weight-normal);
   --color: var(--color-secondary);
 
   --color-hover: var(--color-brand-01-darkest);
@@ -1242,7 +1263,7 @@ po-popup po-item-list {
   /* option e check */
   --color-option: var(--color-neutral-dark-90);
 
-  --font-weight-selected: var(--font-weight-bold);
+  --font-weight-selected: var(--font-weight-normal);
   --background-selected: var(--color-brand-01-lightest);
 }
 :root {
@@ -1331,13 +1352,13 @@ po-search {
   --font-family: var(--font-family-theme);
   --font-size: var(--font-size-default);
   --text-color-placeholder: var(--color-neutral-light-30);
-  --color: var(--color-neutral-dark-70);
+  --color: var(--color-neutral-light-30);
   --border-radius: var(--border-radius-md);
   --background: var(--color-neutral-light-00);
 
   --text-color: var(--color-neutral-dark-90);
 
-  --color-icon-read: var(--color-neutral-dark-70);
+  --color-icon-read: var(--color-brand-01-dark);
 
   --color-icon: var(--color-action-default);
 
@@ -1361,7 +1382,7 @@ po-select {
   --font-size: var(--font-size-default);
 
   --text-color-empty: var(--color-neutral-light-30);
-  --color: var(--color-neutral-dark-70);
+  --color: var(--color-neutral-light-30);
   --background: var(--color-neutral-light-00);
   --padding-horizontal: 0.5em;
   --padding-vertical: 0.7em;
@@ -1376,7 +1397,7 @@ po-select {
 
   --color-disabled: var(--color-neutral-light-30);
   --background-disabled: var(--color-neutral-light-05);
-  --background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.707 8.29301C18.316 7.90201 17.684 7.90201 17.293 8.29301L12 13.586L6.70701 8.29301C6.31601 7.90201 5.68401 7.90201 5.29301 8.29301C4.90201 8.68401 4.90201 9.31601 5.29301 9.70701L11.293 15.707C11.488 15.902 11.744 16 12 16C12.256 16 12.512 15.902 12.707 15.707L18.707 9.70701C19.098 9.31601 19.098 8.68401 18.707 8.29301Z' fill='#013F65'/%3E%3C/svg%3E%0A");
+  --background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.707 8.29301C18.316 7.90201 17.684 7.90201 17.293 8.29301L12 13.586L6.70701 8.29301C6.31601 7.90201 5.68401 7.90201 5.29301 8.29301C4.90201 8.68401 4.90201 9.31601 5.29301 9.70701L11.293 15.707C11.488 15.902 11.744 16 12 16C12.256 16 12.512 15.902 12.707 15.707L18.707 9.70701C19.098 9.31601 19.098 8.68401 18.707 8.29301Z' fill='#0D84D5'/%3E%3C/svg%3E%0A");
 }
 
 :root {
@@ -1459,7 +1480,7 @@ po-table {
 
   --background-color-headline: var(--color-neutral-light-10);
 
-  --font-weight-headline: var(--font-weight-bold);
+  --font-weight-headline: var(--font-weight-normal);
 
   --color-hover: var(--color-action-hover);
   --background-color-hover: var(--color-brand-01-lighter);
@@ -1545,6 +1566,8 @@ po-table-list-manager {
   /* TYPE */
   --color-type: var(--color-neutral);
 
+  --font-weight: var(--font-weight-normal);
+
   /* COLUMN TEXT */
   --color-column-text: var(--color-neutral-dark-95);
 }
@@ -1555,7 +1578,8 @@ po-table-list-manager {
 po-tag {
   --border-radius: var(--border-radius-pill);
   --font-family: var(--font-family-theme);
-  --font-size: var(--font-size-sm);
+  --font-size: var(--font-size-default);
+  --font-weight: var(--font-weight-normal);
   --line-height: var(--line-height-sm);
 
   /* neutral */
@@ -1618,7 +1642,7 @@ po-textarea {
   --font-size: var(--font-size-default);
 
   --text-color-placeholder: var(--color-neutral-light-30);
-  --color: var(--color-neutral-dark-70);
+  --color: var(--color-neutral-light-30);
   --background: var(--color-neutral-light-00);
 
   --text-color: var(--color-neutral-dark-90);
