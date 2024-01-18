@@ -110,6 +110,7 @@
   --color-hr-border-top: var(--color-neutral-light-10);
 
   --outline-width: var(--border-width-md);
+  --outline-width-focus-visible: var(--border-width-md);
 }
 
 /*------------------------------------*\
@@ -117,24 +118,24 @@
 \*------------------------------------*/
 
 :root {
-  --color-brand-01-lightest: #D7F0FE;
-  --color-brand-01-lighter: #9CD8FC;
-  --color-brand-01-light: #6BC5FA;
-  --color-brand-01-base: #045B8F;
-  --color-brand-01-dark: #013F65;
+  --color-brand-01-lightest: #d7f0fe;
+  --color-brand-01-lighter: #9cd8fc;
+  --color-brand-01-light: #6bc5fa;
+  --color-brand-01-base: #045b8f;
+  --color-brand-01-dark: #013f65;
   --color-brand-01-darker: #002944;
-  --color-brand-01-darkest: #00182B;
-  --color-brand-02-base: #045B8F;
-  --color-brand-03-base: #045B8F;
-  --color-neutral-dark-70: #4D4D4D;
+  --color-brand-01-darkest: #00182b;
+  --color-brand-02-base: #045b8f;
+  --color-brand-03-base: #045b8f;
+  --color-neutral-dark-70: #4d4d4d;
   --color-neutral-dark-80: #363636;
-  --color-neutral-dark-90: #1A1A1A;
-  --color-neutral-dark-95: #0D0D0D;
-  --color-neutral-light-00: #FFFFFF;
-  --color-neutral-light-05: #F2F2F2;
-  --color-neutral-light-10: #E5E5E5;
-  --color-neutral-light-20: #CCCCCC;
-  --color-neutral-light-30: #B2B2B2;
+  --color-neutral-dark-90: #1a1a1a;
+  --color-neutral-dark-95: #0d0d0d;
+  --color-neutral-light-00: #ffffff;
+  --color-neutral-light-05: #f2f2f2;
+  --color-neutral-light-10: #e5e5e5;
+  --color-neutral-light-20: #cccccc;
+  --color-neutral-light-30: #b2b2b2;
   --color-neutral-mid-40: #999999;
   --color-neutral-mid-60: #666666;
 }
@@ -149,6 +150,9 @@
   --color-action-pressed: var(--color-brand-01-darker);
   --color-action-disabled: var(--color-neutral-light-30);
   --color-action-focus: var(--color-brand-01-darkest);
+
+  --font-size-default-normal: 14px;
+  --font-family-default-bold: var(--font-family-theme-bold);
 }
 
 /*------------------------------------*\
@@ -200,7 +204,7 @@
   --color-feedback-negative-base-dark-20: #9e3933;
   --color-transparent: transparent;
 
-/*------------------------------------*\
+  /*------------------------------------*\
   COLOR-PALETTE
 \*------------------------------------*/
 
@@ -218,7 +222,7 @@
   --color-11: #00b28e;
   --color-12: #06a6a5;
 
-/*------------------------------------*\
+  /*------------------------------------*\
   FONT
 \*------------------------------------*/
 
@@ -239,22 +243,22 @@
 }
 
 @font-face {
-  font-family: 'NunitoSans';
-  src: url('./../fonts/Nunito_Sans/NunitoSans-Regular.ttf');
+  font-family: "NunitoSans";
+  src: url("./../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NunitoSans-Bold';
-  src: url('./../fonts/Nunito_Sans/NunitoSans-Bold.ttf');
+  font-family: "NunitoSans-Bold";
+  src: url("./../fonts/Nunito_Sans/NunitoSans-Bold.ttf");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NunitoSans-ExtraLight';
-  src: url('./../fonts/Nunito_Sans/NunitoSans-ExtraLight.ttf');
+  font-family: "NunitoSans-ExtraLight";
+  src: url("./../fonts/Nunito_Sans/NunitoSans-ExtraLight.ttf");
   font-weight: 200;
   font-style: normal;
 }
@@ -320,7 +324,7 @@ po-accordion-manager {
   --color-accordion-item-header-button-focus: var(--color-focus);
   /*Deprecated v18.x.x utilizar --color-focus*/
 
-/*------------------------------------*\
+  /*------------------------------------*\
   AVATAR
 \*------------------------------------*/
 
@@ -382,35 +386,36 @@ po-badge {
   --font-weight: var(--font-weight-bold);
 }
 
-po-badge[p-status='disabled'] {
+po-badge[p-status="disabled"] {
   --background-color: var(--color-action-disabled);
 }
 
-po-badge[p-status='positive'] {
+po-badge[p-status="positive"] {
   --background-color: var(--color-feedback-positive-base);
 }
 
-po-badge[p-status='negative'] {
+po-badge[p-status="negative"] {
   --background-color: var(--color-feedback-negative-base);
 }
 
-po-badge[p-status='warning'] {
+po-badge[p-status="warning"] {
   --background-color: var(--color-feedback-warning-base);
   --color: var(--color-neutral-dark-95);
 }
 
 :root {
-/*------------------------------------*\
+  /*------------------------------------*\
   BADGE
 \*------------------------------------*/
   --color-badge-color: var(--color-neutral-light-00);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   BREADCRUMB
 \*------------------------------------*/
 }
 po-breadcrumb {
   --font-family: var(--font-family-theme);
+  --font-weight: var(--font-weight-bold);
   --color-icon: var(--color-neutral-mid-60);
   --color-current-page: var(--color-neutral-mid-60);
   --color: var(--color-action-default);
@@ -447,10 +452,10 @@ po-button-group .po-button {
   --background-color-disabled: var(--color-transparent);
 }
 
-:root{
-  --color-breadcrumb-color-item: var(--color);/*Deprecated v18.x.x utilizar --color */
+:root {
+  --color-breadcrumb-color-item: var(--color); /*Deprecated v18.x.x utilizar --color */
 
-/*------------------------------------*\
+  /*------------------------------------*\
   BUTTON GROUP
 \*------------------------------------*/
   --color-button-group-background-selected: var(--color-pressed);
@@ -481,7 +486,7 @@ po-button-group .po-button {
   --color-button-group-color-neutral-disabled: var(--color-disabled);
   /*Deprecated v18.x.x utilizar --color-disabled */
 
-/*------------------------------------*\
+  /*------------------------------------*\
   CALENDAR
 \*------------------------------------*/
   --color-calendar-background-color: var(--color-neutral-light-00);
@@ -509,7 +514,7 @@ po-button-group .po-button {
   --color-calendar-color-box-foreground-today: var(--color-action-default);
   --color-calendar-color-box-foreground-disabled: var(--color-neutral-light-20);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   CHART
 \*------------------------------------*/
   --color-chart-background-color: var(--color-neutral-light-00);
@@ -567,7 +572,7 @@ po-checkbox {
   --color-checkbox-hover-active: var(--shadow-color-hover);
   /* Deprecated v17.x.x utilizar --shadow-color-hover */
 
-/*------------------------------------*\
+  /*------------------------------------*\
   CHECKBOX GROUP
 \*------------------------------------*/
   --color-checkbox-group-background-color: var(--color-neutral-light-00);
@@ -584,7 +589,7 @@ po-checkbox {
   --color-checkbox-group-color-active: var(--color-neutral-light-00);
 }
 
-  /*------------------------------------*\
+/*------------------------------------*\
     COMBO
   \*------------------------------------*/
 
@@ -657,7 +662,7 @@ po-disclaimer {
 }
 
 :root {
-/*------------------------------------*\
+  /*------------------------------------*\
   DISCLAIMER GROUP
 \*------------------------------------*/
 
@@ -708,12 +713,8 @@ po-dropdown {
   --color-dropdown-button-color-hover: var(--color-hover); /* Deprecated v17.x.x utilizar --color-hover */
   --color-dropdown-button-border-color-hover: var(--color-hover); /* Deprecated v17.x.x utilizar --color-hover */
 
-  --color-dropdown-button-color-disabled: var(
-    --color-disabled
-  ); /* Deprecated v17.x.x utilizar --color-action-disabled */
-  --color-dropdown-button-border-color-disabled: var(
-    --color-disabled
-  ); /* Deprecated v17.x.x utilizar --color-action-disabled */
+  --color-dropdown-button-color-disabled: var(--color-disabled); /* Deprecated v17.x.x utilizar --color-action-disabled */
+  --color-dropdown-button-border-color-disabled: var(--color-disabled); /* Deprecated v17.x.x utilizar --color-action-disabled */
 }
 
 /*------------------------------------*\
@@ -739,7 +740,7 @@ po-field-container-bottom {
 }
 
 :root {
-/*------------------------------------*\
+  /*------------------------------------*\
   FIELD CONTAINER BOTTOM
 \*------------------------------------*/
   --color-field-container-bottom-color-text-error: var(--text-color-error);
@@ -747,7 +748,7 @@ po-field-container-bottom {
   --color-field-container-color-help: var(--text-color-help);
    /*Deprecated v18.x.x utilizar --text-color-help */
 
-/*------------------------------------*\
+  /*------------------------------------*\
   FIELD ICON
 \*------------------------------------*/
   --color-field-icon-color: var(--color-action-default);
@@ -757,7 +758,7 @@ po-field-container-bottom {
   --color-field-icon-color-disabled: var(--color-neutral-light-30);
   /*Deprecated v18.x.x utilizar --color-neutral-light-30 */
 
-/*------------------------------------*\
+  /*------------------------------------*\
   GAUGE
 \*------------------------------------*/
   --color-gauge-base-color: var(--color-neutral-light-20);
@@ -767,7 +768,7 @@ po-field-container-bottom {
   --color-gauge-legend-text: var(--color-neutral);
   --color-gauge-pointer-color: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   INFO
 \*------------------------------------*/
   --color-info-color-text-label: var(--color-neutral);
@@ -856,7 +857,7 @@ po-item-list {
   --background-selected: var(--color-brand-01-lightest);
 }
 
-po-item-list:is([p-type='option'], [p-type='check']) {
+po-item-list:is([p-type="option"], [p-type="check"]) {
   --font-weight: var(--font-weight-normal);
 }
 
@@ -888,7 +889,7 @@ po-label {
 po-link {
   --font-family: var(--font-family-theme);
   --text-color: var(--color-action-default);
-
+  --font-weight: var(--font-weight-bold);
   --text-color-hover: var(--color-action-hover);
   --text-color-pressed: var(--color-action-pressed);
   --outline-color-focused: var(--color-action-focus);
@@ -952,7 +953,7 @@ po-loading-icon {
   --color-loading-overlay-box-shadow-content: var(--shadow);
   /*Deprecated v18.x.x utilizar --shadow*/
 
-/*------------------------------------*\
+  /*------------------------------------*\
   LOOKUP
 \*------------------------------------*/
   --color-lookup-search-background-color-text: var(--color-neutral-light-00);
@@ -1069,7 +1070,7 @@ po-menu-filter {
   --color-menu-filter-border-focusable: var(--color-focused);
   /*Deprecated v17.x.x utilizar --color-focused*/
 
-/*------------------------------------*\
+  /*------------------------------------*\
   MENU PANEL
 \*------------------------------------*/
   --color-menu-panel-background-color-item-hover: var(--color-black-alpha-15);
@@ -1093,7 +1094,7 @@ po-modal {
   --shadow: var(--shadow-md);
   --color-overlay: var(--color-neutral-dark-80);
   --opacity-overlay: 0.7;
-  --color-divider: var(--color-neutral-light-20)
+  --color-divider: var(--color-neutral-light-20);
 }
 
 /*------------------------------------*\
@@ -1104,7 +1105,7 @@ po-modal {
   --color-modal-color-overlay: var(--color-overlay); /*Deprecated v17.x.x utilizar --color-overlay*/
   --shadow-modal-content: var(--shadow); /*Deprecated v17.x.x utilizar --shadow*/
 
-/*------------------------------------*\
+  /*------------------------------------*\
   MODAL PASSWORD RECOVERY
 \*------------------------------------*/
   --color-modal-password-recovery-link-color: var(--color-action-default);
@@ -1120,6 +1121,7 @@ po-multiselect {
   --font-size: var(--font-size-default);
   --text-color-placeholder: var(--color-action-disabled);
   --color: var(--color-neutral);
+  --color-icon: var(--color-neutral-dark-70);
   --background: var(--color-neutral-light-00);
 
   /* hover */
@@ -1165,30 +1167,30 @@ po-page-header .po-page-header-subtitle {
 }
 
 :root {
-/*------------------------------------*\
+  /*------------------------------------*\
   NAVBAR
 \*------------------------------------*/
 
   --color-navbar-color: var(--color-neutral-light-00);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   NAVBAR ACTION
 \*------------------------------------*/
   --color-navbar-action-color-content: var(--color-action-default);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   NAVBAR ACTION POPUP
 \*------------------------------------*/
   --color-navbar-action-popup-color-content: var(--color-navbar-action-color-content);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   NAVBAR ITEM
 \*------------------------------------*/
   --color-navbar-item-color: var(--color-action-default);
   --color-navbar-item-color-selected: var(--color-neutral);
   --color-navbar-item-color-shadow-selected: var(--color-action-default);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   NAVBAR ITEM NAVIGATION
 \*------------------------------------*/
   --color-navbar-item-navigation-color-icon: var(--color-action-default);
@@ -1204,18 +1206,17 @@ po-overlay {
 }
 
 :root {
-
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE
 \*------------------------------------*/
   --color-page-background-color-page: var(--color-neutral-light-00);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE BACKGROUND
 \*------------------------------------*/
   --color-page-background-select-item-border-color: var(--color-neutral-light-10);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE BLOCKED USER
 \*------------------------------------*/
   --color-page-blocked-user-link-color: var(--color-action-default);
@@ -1223,7 +1224,7 @@ po-overlay {
   --color-page-blocked-user-text-color: var(--color-neutral);
   --color-page--blocked-user-background-color: var(--color-neutral-light-05);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE CHANGE PASSWORD
 \*------------------------------------*/
   --color-page-change-password-background-color-buttons: var(--color-neutral-light-05);
@@ -1236,23 +1237,23 @@ po-overlay {
   --color-page-change-password-color-required-minus: var(--color-black-alpha-30);
   --color-page-change-password-color-required-text: var(--color-secondary-dark-60-alpha-70);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE CONTENT
 \*------------------------------------*/
   --color-page-content-background-color-scrollbar: var(--color-action-default);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE HEADER
 \*------------------------------------*/
 --color-page-header-color-title: var(--color-neutral); 
 /*Deprecated v18.x.x utilizar --text-color */
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE LIST
 \*------------------------------------*/
   --color-page-list-color-link-text: var(--color-action-default);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE LOGIN
 \*------------------------------------*/
   --color-page-login-header-product-name-color: var(--color-neutral);
@@ -1279,6 +1280,7 @@ po-page-slide {
   --opacity-overlay: 0.7;
 
   --font-family: var(--font-family-heading);
+  --font-weight: var(--font-weight-bold);
   --color-title: var(--color-neutral-dark-95);
 }
 
@@ -1286,7 +1288,7 @@ po-page-slide {
   --color-page-slide-close-button-color: var(--color-action-default);
   --color-page-slide-body-text-color: var(--color-neutral-dark-90);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   POPOVER
 \*------------------------------------*/
   --color-popover-background-color: var(--color-neutral-light-00);
@@ -1362,7 +1364,6 @@ po-progress-bar {
 }
 
 :root {
-
   /*------------------------------------*\
     PROGRESS
   \*------------------------------------*/
@@ -1375,7 +1376,9 @@ po-progress-bar {
   \*------------------------------------*/
 
   --color-progress-bar-background-color-bar: var(--background-color-tray); /*Deprecated v18.x.x utilizar --background-color-tray */
-  --color-progress-bar-background-color-default: var(--background-color-indicator); /*Deprecated v18.x.x utilizar --background-color-indicator */
+  --color-progress-bar-background-color-default: var(
+    --background-color-indicator
+  ); /*Deprecated v18.x.x utilizar --background-color-indicator */
 }
 
 /*------------------------------------*\
@@ -1401,7 +1404,7 @@ po-radio {
 }
 
 :root {
-/*------------------------------------*\
+  /*------------------------------------*\
   RICH TEXT
 \*------------------------------------*/
   --color-rich-text-body-background-color: var(--color-neutral-light-00);
@@ -1470,7 +1473,7 @@ po-select {
 }
 
 :root {
-/*------------------------------------*\
+  /*------------------------------------*\
   SLIDE
 \*------------------------------------*/
   --color-slide-background-color-active-circle: var(--color-action-default);
@@ -1481,7 +1484,7 @@ po-select {
   --color-slide-box-shadow-arrow-circle: var(--color-black-alpha-15);
   --color-slide-box-shadow-wrapper: var(--color-black-alpha-30);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   STEPPER
 \*------------------------------------*/
   --color-stepper-bar: var(--color-neutral);
@@ -1534,7 +1537,7 @@ po-tabs, po-tab-button {
 }
 
 :root {
-/*------------------------------------*\
+  /*------------------------------------*\
   TAB BUTTON
 \*------------------------------------*/
 --color-tab-button-box-shadow: var(--color-baseline); /*Deprecated v18.x.x utilizar --color-baseline*/
@@ -1543,7 +1546,7 @@ po-tabs, po-tab-button {
 --color-tab-button-color: var(--color); /*Deprecated v18.x.x utilizar --color*/
 --color-tab-button-color-disabled: var(--color-disabled); /*Deprecated v18.x.x utilizar --color-disabled*/
 
-/*------------------------------------*\
+  /*------------------------------------*\
   TAB DROPDOWN
 \*------------------------------------*/
 }
@@ -1637,7 +1640,7 @@ po-table {
 
   --color-table-color-single-action-hover: var(--color-brand-01-dark);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   TABLE COLUMN LINK
 \*------------------------------------*/
 
@@ -1650,9 +1653,10 @@ po-table {
 po-table-list-manager {
   /* TYPE */
   --color-type: var(--color-neutral);
-
+  --font-weight: var(--font-weight-bold);
   /* COLUMN TEXT */
   --color-column-text: var(--color-neutral-dark-95);
+  --font-weight: var(--font-weight-bold);
 }
 
 /*------------------------------------*\
@@ -1661,6 +1665,7 @@ po-table-list-manager {
 po-tag {
   --border-radius: var(--border-radius-pill);
   --font-family: var(--font-family-theme);
+  --font-weight: var(--font-weight-bold);
   --font-size: var(--font-size-sm);
   --line-height: var(--line-height-sm);
 
@@ -1745,7 +1750,7 @@ po-textarea {
 }
 
 :root {
-/*------------------------------------*\
+  /*------------------------------------*\
   TOOLBAR
 \*------------------------------------*/
   --color-toolbar-background-color-badge: var(--color-feedback-negative-base);
@@ -1769,7 +1774,7 @@ po-textarea {
 }
 
 :root {
-/*------------------------------------*\
+  /*------------------------------------*\
   TREEVIEW
 \*------------------------------------*/
   /** Tree View Item */
@@ -1780,7 +1785,7 @@ po-textarea {
   --color-tree-view-item-header-button-focus: var(--color-secondary);
   --color-tree-view-item-header-label-text-color: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   UPLOAD
 \*------------------------------------*/
   --color-upload-color-text-filename-loading: var(--color-neutral-light-00);
