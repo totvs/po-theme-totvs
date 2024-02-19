@@ -1,0 +1,53 @@
+name: Run publish @totvs/po-theme Beta
+
+env:
+  PACKAGE_NAME: totvs/po-theme
+  WORKING_DIR: /home/runner/work/po-theme-totvs/po-theme-totvs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - run: npm install -g @po-ui/theme-cli
+      - run: npm install
+      - run: npm run build
+
+      # Pega a versão no package.json
+      - name: Get package.json version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@main
+
+      # Verifica se a versão a ser publicada já existe no NPM
+      - name: Verificar se a versão existe
+        id: version
+        run: |
+          VERSION_TO_CHECK=${{ steps.package-version.outputs.current-version }}
+          if jq -e --arg version "$VERSION_TO_CHECK" '.[] | select(. == $version)' versions.json; then
+            echo "publish=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish=yes" >> "$GITHUB_OUTPUT"
+          fi
+
+      # PUBLISH NPM PO-THEME-TOTVS
+      - name: po-theme-totvs - publish
+        if: contains(steps.version.outputs.publish, 'yes')
+        run: npm publish ${{env.WORKING_DIR}}/dist  --tag beta --access=public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: po-theme-totvs - add "beta" tag
+        if: contains(steps.version.outputs.publish, 'no')
+        run: npm dist-tags add @${{ env.PACKAGE_NAME }}@${{ env.PACKAGE_VERSION }} "beta"
+        working-directory: ${{env.WORKING_DIR}}
+        env:
+          PACKAGE_VERSION: ${{ steps.package-version.outputs.current-version }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
