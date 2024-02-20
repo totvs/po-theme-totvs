@@ -780,6 +780,17 @@ po-field-container-bottom {
 }
 
 /*------------------------------------*\
+  INFO CONTAINER CONTENT
+\*------------------------------------*/
+po-info .po-info-container-content {
+  --padding: var(--spacing-xs) 0;
+}
+
+po-info .po-info-label-horizontal {
+  --padding: 0 var(--spacing-xs) 0 0;
+}
+
+/*------------------------------------*\
   INPUT
 \*------------------------------------*/
 po-input,
@@ -1668,6 +1679,8 @@ po-tag {
   --font-weight: var(--font-weight-bold);
   --font-size: var(--font-size-sm);
   --line-height: var(--line-height-sm);
+  --gap: var(--spacing-xs);
+  --padding: 0;
 
   /* neutral */
   --color-neutral: var(--color-neutral-light-10);
