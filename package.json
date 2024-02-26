@@ -1,6 +1,6 @@
 {
   "name": "@totvs/po-theme",
-  "version": "16.15.0",
+  "version": "16.16.0",
   "author": "Totvs",
   "description": "PO Theme - Totvs Default Theme",
   "repository": {
@@ -12,6 +12,6 @@
     "build": "po-theme build --fonts --name=default"
   },
   "devDependencies": {
-    "@po-ui/style": "16.15.0"
+    "@po-ui/style": "16.16.0"
   }
 }
