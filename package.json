@@ -12,6 +12,6 @@
     "build": "po-theme build --fonts --name=default"
   },
   "devDependencies": {
-    "@po-ui/style": "17.0.0"
+    "@po-ui/style": "17.1.0"
   }
 }
