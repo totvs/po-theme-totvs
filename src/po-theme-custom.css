@@ -693,7 +693,10 @@ po-dropdown {
   --color: var(--color-action-default);
   --border-radius: var(--border-radius-md);
   --border-width: var(--border-width-md);
-  --padding: 0 1em;
+
+  --padding-horizontal: 1em;
+  --padding-vertical: 0;
+  --padding: var(--padding-vertical) var(--padding-horizontal);
 
   /* hover */
   --color-hover: var(--color-action-focus);
@@ -707,6 +710,9 @@ po-dropdown {
 
   /* disabled */
   --color-disabled: var(--color-action-disabled);
+    
+  /* background color */
+  --background: var(--color-transparent);
 }
 
 /*------------------------------------*\
@@ -1479,6 +1485,12 @@ po-search {
 
   --color-disabled: var(--color-action-disabled);
   --background-disabled: var(--color-neutral-light-05);
+
+  --text-color-empty: var(--color-neutral-mid-60);
+
+  --background-select: var(--background);
+  --background-select-hover: var(--background-hover);
+  --background-select-disabled: var(background-disabled);
 }
 
 /*------------------------------------*\
