@@ -430,7 +430,6 @@ po-button-group .po-button {
 }
 
 :root {
-
   /*------------------------------------*\
   CALENDAR
 \*------------------------------------*/
@@ -495,7 +494,6 @@ po-checkbox {
 }
 
 :root {
-
   /*------------------------------------*\
   CHECKBOX GROUP
 \*------------------------------------*/
@@ -641,7 +639,7 @@ po-dropdown {
 /*------------------------------------*\
   DYNAMIC
 \*------------------------------------*/
-po-dynamic-container  {
+po-dynamic-container {
   --gap: var(--spacing-md);
   --font-family: var(--font-family-theme);
   --font-size: 1.125rem;
@@ -656,14 +654,14 @@ po-dynamic-container po-container {
   --background: var(--color-neutral-light-00);
   --border-color: var(--color-neutral-light-20);
   --border-width: var(--border-width-sm);
-  --padding: var(--spacing-md)
+  --padding: var(--spacing-md);
 }
 
 /*------------------------------------*\
   FIELD CONTAINER CONTENT
 \*------------------------------------*/
 .po-field-container-content {
-  --padding: var(--spacing-xs)  0;
+  --padding: var(--spacing-xs) 0;
 }
 
 /*------------------------------------*\
@@ -1131,9 +1129,17 @@ po-overlay {
 /*------------------------------------*\
   PAGE SLIDE
 \*------------------------------------*/
+
+/* transition slide */
+:root {
+  --transition-duration: var(--duration-extra-fast);
+  --transition-timing: var(--duration-extra-slow) var(--timing-standart);
+}
+
 po-page-slide {
   --background-color: var(--color-neutral-light-00);
-  --border-radius: var(--border-radius-md);
+  --border-radius: var(--border-radius-md) 0 0 var(--border-radius-md);
+  --border-color: var(--color-neutral-light-20);
 
   --color-overlay: var(--color-neutral-dark-80);
   --opacity-overlay: 0.7;
@@ -1142,8 +1148,20 @@ po-page-slide {
   --font-weight: var(--font-weight-bold);
   --color-title: var(--color-neutral-dark-95);
 
-  --padding-header: var(--spacing-lg) var(--spacing-md) 0px var(--spacing-md);
-  --padding-body: 0px var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+  --padding-header: var(--spacing-md);
+  --padding-body: var(--spacing-md);
+  --padding-footer: var(--spacing-sm) var(--spacing-md) var(--spacing-xl) var(--spacing-md);
+
+  --page-slide-width-sm: 40%;
+  --page-slide-width-md: 50%;
+  --page-slide-width-lg: 60%;
+  --page-slide-width-xl: 70%;
+  --page-slide-min-width-auto: 40%;
+  --page-slide-max-width-auto: 90%;
+}
+
+po-page-slide po-divider {
+  --border-color: var(--color-neutral-light-20);
 }
 
 :root {
@@ -1372,7 +1390,8 @@ po-switch {
   --color-checked-disabled: var(--color-action-disabled);
 }
 
-po-tabs, po-tab-button {
+po-tabs,
+po-tab-button {
   --background: var(--color-transparent);
   --color-baseline: var(--color-neutral-light-20);
 
