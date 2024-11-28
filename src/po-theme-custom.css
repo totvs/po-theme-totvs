@@ -398,6 +398,10 @@ po-breadcrumb {
   --color: var(--color-action-default);
 }
 
+po-button-group {
+  --button-group-container-margin: -2px;
+}
+
 po-button-group .po-button {
   --font-family: var(--font-family-theme);
   --font-size: var(--font-size-default);
@@ -734,6 +738,7 @@ po-decimal,
 po-number,
 po-datepicker,
 po-datepicker-range,
+po-datepicker-range .po-input,
 div.po-lookup-filter-content input.po-input,
 input.po-input {
   --font-family: var(--font-family-theme);
@@ -1286,6 +1291,10 @@ po-radio {
   --color-checked-disabled: var(--color-neutral-dark-70);
 }
 
+po-rich-text .po-button {
+  --border-width: var(--border-width-md);
+}
+
 :root {
   /*------------------------------------*\
   RICH TEXT
@@ -1297,7 +1306,7 @@ po-radio {
   --color-rich-text-body-border-error: var(--color-feedback-negative-base);
   --color-rich-text-body-text-selected-color: var(--color-brand-01-lighter);
 
-  --color-rich-text-toolbar-background-color: var(--color-rich-text-body-background-color);
+  --color-rich-text-toolbar-background-color: var(--color-transparent);
 }
 
 /*------------------------------------*\
@@ -1332,7 +1341,7 @@ po-search {
 
   --background-select: var(--background);
   --background-select-hover: var(--background-hover);
-  --background-select-disabled: var(background-disabled);
+  --background-select-disabled: var(--background-disabled);
 }
 
 /*------------------------------------*\
@@ -1447,6 +1456,10 @@ po-tab-button {
 
   --margin-tabs-container-left: -16px;
   --margin-tabs-container-right: -16px;
+}
+
+po-tabs po-tab-dropdown po-button {
+  --background-hover: var(--color-brand-01-lightest);
 }
 
 /*------------------------------------*\
