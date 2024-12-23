@@ -1,6 +1,6 @@
 {
   "name": "@totvs/po-theme",
-  "version": "18.24.0",
+  "version": "19.0.0",
   "author": "Totvs",
   "description": "PO Theme - Totvs Default Theme",
   "repository": {
@@ -9,9 +9,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "po-theme build --fonts --name=default"
+    "build": "po-theme build --fonts --name=default",
+    "pack": "cd dist/ && npm pack",
+    "publish:local": "npm publish ./dist --registry http://localhost:4873 --ignore-scripts"
   },
   "devDependencies": {
-    "@po-ui/style": "18.24.0"
+    "@po-ui/style": "19.0.0"
   }
 }
