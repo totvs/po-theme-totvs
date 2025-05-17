@@ -1431,7 +1431,8 @@ po-switch {
 }
 
 po-tabs,
-po-tab-button {
+po-tab-button,
+po-tabs2 {
   --background: var(--color-transparent);
   --color-baseline: var(--color-neutral-light-20);
 
