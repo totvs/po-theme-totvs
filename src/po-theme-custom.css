@@ -1124,7 +1124,7 @@ po-page-header .po-page-header-subtitle {
 }
 
 po-page-content {
-  --padding-content: var(--spacing-xs) var(--spacing-sm);
+  --padding-content: var(--spacing-xs) var(--spacing-sm); /*Deprecated v20.x.x*/
 }
 
 :root {
