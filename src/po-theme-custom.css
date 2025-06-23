@@ -1110,7 +1110,7 @@ po-page-header .po-page-header-title {
 }
 
 po-page-content {
-  --padding-content: var(--padding-content);
+  --padding-content: var(--padding-content); /*Deprecated v20.x.x*/
 }
 
 :root {
