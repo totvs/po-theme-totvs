@@ -1113,18 +1113,10 @@ po-page-header {
 po-page-header .po-page-header-title {
   --font-family: var(--font-family-extra-light);
   --font-size: 2.125rem;
-  --line-height: 3rem;
-  --text-color: var(--color-neutral-dark-70);
-}
-po-page-header .po-page-header-subtitle {
-  --font-family: var(--font-family-theme);
-  --font-size: var(--font-size-default);
-  --line-height: var(--line-height-md);
-  --text-color: var(--color-neutral-dark-70);
 }
 
 po-page-content {
-  --padding-content: var(--spacing-xs) var(--spacing-sm);
+  --padding-content: var(--padding-content); /*Deprecated v20.x.x*/
 }
 
 :root {
@@ -1515,8 +1507,8 @@ po-tab-button {
   --color-disabled: var(--color-action-disabled);
   --background-item-disabled: var(--color-neutral-light-10);
 
-  --margin-tabs-container-left: -16px;
-  --margin-tabs-container-right: -16px;
+  --margin-tabs-container-left: var(--margin-tabs-container-left);
+  --margin-tabs-container-right: var(--margin-tabs-container-right);
   --padding-tabs-header: var(--spacing-sm);
   --margin-tabs-first-child: var(--spacing-md);
   --margin-tabs-last-child: var(--spacing-md);
