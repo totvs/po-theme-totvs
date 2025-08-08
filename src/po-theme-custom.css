@@ -1754,6 +1754,11 @@ po-textarea {
   WIDGET
 \*------------------------------------*/
 po-widget {
+  --font-family: var(--font-family-theme);
+  --font-size: var(--font-size-default);
+  --font-weight: var(--font-weight-bold);
+  --font-color: var(--color-neutral-dark-95);
+
   --padding: 1em;
   --border-radius: var(--border-radius-md);
   --border-color: var(--color-neutral-light-20);
@@ -1776,8 +1781,8 @@ po-widget {
   --color-widget-color-action-active: var(--color-brand-01-dark);
   --color-widget-color-action-hover: var(--color-brand-01-dark);
   --color-widget-color-action: var(--color-action-default);
-  --color-widget-color-default: var(--color-neutral);
-  --color-widget-color-title-action: var(--color-action-default);
+  --color-widget-color-default: var(--font-color);
+  --color-widget-color-title-action: var(--font-color);
   --color-widget-color-widget-primary: var(--color-neutral-light-00);
 
   --color-widget-primary-background-color: var(--color-brand-03-base);
@@ -1786,7 +1791,7 @@ po-widget {
   --color-widget-border-color-footer: var(--color-neutral-light-10);
   --color-widget-border-color-footer-primary: var(--color-white-alpha-30);
 
-  --color-widget-background-color-disabled: var(--color-neutral-light-10);
+  --color-widget-background-color-disabled: var(--color-neutral-light-05);
   --color-widget-background-color-scroll-disabled: var(--color-neutral-mid-40);
   --color-widget-color-disabled: var(--color-neutral-mid-40);
 }
