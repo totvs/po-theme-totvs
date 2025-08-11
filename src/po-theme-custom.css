@@ -1764,6 +1764,7 @@ po-widget {
   --background: var(--color-neutral-light-00);
   --border-width: var(--border-width-sm);
   --shadow: var(--shadow-md);
+  --padding: var(--padding); /*Deprecated v21.x.x utilizar --padding-header, --padding-body, e --padding-footer*/
 
   --background-selected: var(--color-brand-01-lightest);
   --border-color-selected: var(--color-action-default);
