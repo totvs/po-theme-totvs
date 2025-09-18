@@ -10,6 +10,7 @@
  * Color..........................variáveis globais de cores.
  * Color Palette..................variáveis da peleta de cores.
  * Font...........................variáveis de fontes.
+ * Scrollbar......................variáveis do scrollbar.
  *
  * COMPONENTS
  * Accordion......................variáveis do Accordion.
@@ -185,7 +186,7 @@
 \*------------------------------------*/
 
 :root {
-  --color-primary-alpha-50: rgba(12, 154, 190, 0.5); /* Scroll (opacidade de 50%) */
+  --color-primary-alpha-50: rgba(12, 154, 190, 0.5); /* Cor icon drag and drop upload (opacidade de 50%) */
 
   /* Secondary */
   --color-secondary: #0d729c;
@@ -286,6 +287,14 @@
   src: url("./../fonts/Nunito_Sans/NunitoSans-ExtraLight.ttf");
   font-weight: 200;
   font-style: normal;
+}
+
+:root {
+  /*------------------------------------*\
+  SCROLLBAR
+\*------------------------------------*/
+  --color-track: var(--color-neutral-light-10);
+  --color-thumb: var(--color-neutral-light-30);
 }
 
 /*------------------------------------*\
@@ -1201,7 +1210,7 @@ po-overlay {
   /*------------------------------------*\
   PAGE CONTENT
 \*------------------------------------*/
-  --color-page-content-background-color-scrollbar: var(--color-action-default);
+  --color-page-content-background-color-scrollbar: var(--color-thumb); /*Deprecated v21.x.x utilizar --color-thumb */
 
   /*------------------------------------*\
   PAGE LIST
@@ -1271,7 +1280,7 @@ po-page-slide po-divider {
 \*------------------------------------*/
   --color-popover-background-color: var(--color-neutral-light-00);
   --color-popover-background-color-arrow: var(--color-neutral-light-00);
-  --color-popover-background-color-scrollbar: var(--color-action-default);
+  --color-popover-background-color-scrollbar: var(--color-thumb); /*Deprecated v21.x.x utilizar --color-thumb */
 
   --color-popover-color-text-title: var(--color-neutral);
 }
@@ -1359,7 +1368,7 @@ po-rich-text .po-button {
   RICH TEXT
 \*------------------------------------*/
   --color-rich-text-body-background-color: var(--color-neutral-light-00);
-  --color-rich-text-background-color-scrollbar: var(--color-primary-alpha-50);
+  --color-rich-text-background-color-scrollbar: var(--color-thumb); /*Deprecated v21.x.x utilizar --color-thumb */
   --color-rich-text-placeholder-color: var(--color-neutral-mid-40);
   --color-rich-text-body-text-error: var(--color-feedback-negative-base);
   --color-rich-text-body-border-error: var(--color-feedback-negative-base);
@@ -1441,7 +1450,7 @@ po-select {
   --color-slide-background-color-active-circle: var(--color-action-default);
   --color-slide-background-color-arrow-circle: var(--color-neutral-light-00);
   --color-slide-background-color-circle: var(--color-neutral-light-20);
-  --color-slide-background-color-scrollbar: var(--color-primary-alpha-50);
+  --color-slide-background-color-scrollbar: var(--color-thumb); /*Deprecated v21.x.x utilizar --color-thumb */
   --color-slide-border-arrow: var(--color-action-default);
   --color-slide-box-shadow-arrow-circle: var(--color-black-alpha-15);
   --color-slide-box-shadow-wrapper: var(--color-black-alpha-30);
@@ -1802,7 +1811,7 @@ po-widget {
   --color-widget-border-color-footer-primary: var(--color-white-alpha-30);
 
   --color-widget-background-color-disabled: var(--color-neutral-light-05);
-  --color-widget-background-color-scroll-disabled: var(--color-neutral-mid-40);
+  --color-widget-background-color-scroll-disabled: var(--color-thumb); /*Deprecated v21.x.x utilizar --color-thumb */
   --color-widget-color-disabled: var(--color-neutral-mid-40);
 }
 
