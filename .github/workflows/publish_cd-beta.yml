@@ -6,25 +6,17 @@ env:
 
 on:
   workflow_dispatch:
-    inputs:
-      version-beta:
-        description: Informe a versão do Beta do Totvs/PO-THEME
-        required: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/development'
+    if: github.ref == 'refs/heads/beta'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
-
-      - name: Update Version
-        run: node ./scripts/update-version.js ${{ github.event.inputs.version-beta }}
-        working-directory: ${{env.WORKING_DIR}}
 
       - run: npm install -g @po-ui/theme-cli
       - run: npm install
