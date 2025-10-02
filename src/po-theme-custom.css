@@ -36,6 +36,7 @@
  * Field Container Bottom.........variáveis do Field Container Bottom.
  * Field Icon.....................variáveis do Field Icon.
  * Gauge..........................variáveis do Gauge.
+ * Helper.........................variáveis do Helper.
  * Info...........................variáveis do Info.
  * Input..........................variáveis do Input.
  * Itemlist.......................variáveis do Itemlist
@@ -1905,4 +1906,11 @@ po-header {
   --nav-overlay-left: 0px;
   --nav-menu-top: 56px;
   --nav-menu-left: 0px;
+}
+
+po-helper {
+  --color: var(--color-action-default);
+  --border-color-hover: var(--color-brand-01-darkest);
+  --background-pressed: var(--color-brand-01-light);
+  --color-disabled: var(--color-action-disabled);
 }
