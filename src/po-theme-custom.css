@@ -293,12 +293,20 @@
 
 /* DENSITY - LAYOUT TOKENS */
 :root {
-  --po-density-header-padding: var(--po-density-header-padding); /* Padding interno em headers (inclui pages, dynamics, page slide e modal) */
-  --po-density-content-padding: var(--po-density-content-padding); /* Padding interno em contents (inclui pages, dynamics, container, list view, page slide, modal, stepper e disclaimer-group) */
+  --po-density-header-padding: var(
+    --po-density-header-padding
+  ); /* Padding interno em headers (inclui pages, dynamics, page slide e modal) */
+  --po-density-content-padding: var(
+    --po-density-content-padding
+  ); /* Padding interno em contents (inclui pages, dynamics, container, list view, page slide, modal, stepper e disclaimer-group) */
   --po-density-footer-padding: var(--po-density-footer-padding); /* Padding interno em footers (inclui modal e page slide) */
-  --po-density-gap-header-content: var(--po-density-gap-header-content); /* Espaço interno entre o header e o content (inclui pages, tabs e stepper) */
-  --po-density-gap-spacing: var(--po-density-gap-spacing); /* Espaço interno entre blocos de conteúdo presentes no header e content (inclui dividers e gaps) */
-  --po-density-floating-padding: var(--po-density-floating-padding);  /* Padding interno de componentes flutuantes como tooltip e popover */
+  --po-density-gap-header-content: var(
+    --po-density-gap-header-content
+  ); /* Espaço interno entre o header e o content (inclui pages, tabs e stepper) */
+  --po-density-gap-spacing: var(
+    --po-density-gap-spacing
+  ); /* Espaço interno entre blocos de conteúdo presentes no header e content (inclui dividers e gaps) */
+  --po-density-floating-padding: var(--po-density-floating-padding); /* Padding interno de componentes flutuantes como tooltip e popover */
 }
 
 :root {
@@ -557,6 +565,10 @@ po-chart .po-chart {
   --color-gauge-pointer-color: var(--color-neutral-dark-70);
 
   --color-chart-line-point-fill: var(--color-neutral-light-00);
+
+  --border-color-radar: var(--color-neutral-light-30);
+  --color-background-zebra: var(--color-neutral-light-10);
+  --color-background-line: none;
 }
 
 po-chart .po-chart-container-gauge {
