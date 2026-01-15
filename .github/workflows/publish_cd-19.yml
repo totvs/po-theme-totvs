@@ -1,4 +1,4 @@
-name: Run publish @totvs/po-theme Angular@17
+name: Run publish @totvs/po-theme Angular@19
 
 env:
   PACKAGE_NAME: totvs/po-theme
@@ -10,12 +10,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/17.x.x'
+    if: github.ref == 'refs/heads/19.x.x'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: "24.x"
           registry-url: "https://registry.npmjs.org"
 
       - run: npm install -g @po-ui/theme-cli
@@ -45,13 +45,13 @@ jobs:
       # PUBLISH NPM PO-THEME-TOTVS
       - name: po-theme-totvs - publish
         if: contains(steps.version.outputs.publish, 'yes')
-        run: npm publish ${{env.WORKING_DIR}}/dist  --tag "v17-lts" --access=public
+        run: npm publish ${{env.WORKING_DIR}}/dist  --tag "v19-lts" --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: po-theme-totvs - add "v17-lts" tag
+      - name: po-theme-totvs - add "v19-lts" tag
         if: contains(steps.version.outputs.publish, 'no')
-        run: npm dist-tags add @${{ env.PACKAGE_NAME }}@${{ env.PACKAGE_VERSION }} "v17-lts"
+        run: npm dist-tags add @${{ env.PACKAGE_NAME }}@${{ env.PACKAGE_VERSION }} "v19-lts"
         working-directory: ${{env.WORKING_DIR}}
         env:
           PACKAGE_VERSION: ${{ steps.package-version.outputs.current-version }}
