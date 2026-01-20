@@ -1816,10 +1816,10 @@ po-widget {
   --shadow: var(--shadow-md);
   --padding: var(--padding); /*Deprecated v21.x.x utilizar --padding-header, --padding-body, e --padding-footer*/
 
-  --background-selected: var(--color-brand-01-lightest);
+  --background-selected: var(--color-action-lightest);
   --border-color-selected: var(--color-action-default);
 
-  --border-color-hover: var(--color-brand-01-dark);
+  --border-color-hover: var(--color-action-hover);
   --shadow-hover: var(--shadow-lg);
 
   --color-focused: var(--color-action-default);
