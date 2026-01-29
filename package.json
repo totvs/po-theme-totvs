@@ -1,6 +1,6 @@
 {
   "name": "@totvs/po-theme",
-  "version": "21.0.0",
+  "version": "21.0.1",
   "author": "Totvs",
   "description": "PO Theme - Totvs Default Theme",
   "repository": {
@@ -14,6 +14,6 @@
     "publish:local": "npm publish ./dist --registry http://localhost:4873 --ignore-scripts"
   },
   "devDependencies": {
-    "@po-ui/style": "21.0.0"
+    "@po-ui/style": "21.0.1"
   }
 }
