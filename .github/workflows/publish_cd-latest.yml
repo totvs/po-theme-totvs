@@ -55,3 +55,10 @@ jobs:
         env:
           PACKAGE_VERSION: ${{ steps.package-version.outputs.current-version }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
+      - name: po-theme-totvs - add deprecated report
+        run: npm deprecate @${{ env.PACKAGE_NAME }}"@<23.0.0" "Deprecated. Support will be provided until v23.x.x. This package will no longer be maintained after that version. Open an issue in the GitHub repository https://github.com/totvs/po-theme-totvs"
+        working-directory: ${{env.WORKING_DIR}}
+        env:
+          PACKAGE_VERSION: ${{ steps.package-version.outputs.current-version }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
