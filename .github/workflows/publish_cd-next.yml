@@ -58,7 +58,7 @@ jobs:
 
       - name: po-theme-totvs - add deprecated report
         run: |
-          npm deprecate @${{ env.PACKAGE_NAME }}@*" \
+          npm deprecate "@${{ env.PACKAGE_NAME }}@*" \
           "Deprecated. Support will be provided until v23.x.x. This package will no longer be maintained after that version. Open an issue in the GitHub repository https://github.com/totvs/po-theme-totvs."
         working-directory: ${{env.WORKING_DIR}}
         env:
