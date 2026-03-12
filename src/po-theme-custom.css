@@ -81,6 +81,7 @@
  * Search.........................variáveis do Search.
  * Select.........................variáveis do Select.
  * Skeleton.......................variáveis do Skeleton.
+ * Skeleton - Field...............variáveis do Skeleton de Fields.
  * Slide..........................variáveis do Slide.
  * Stepper........................variáveis do Stepper.
  * Switch.........................variáveis do Switch.
@@ -1531,6 +1532,32 @@ po-skeleton {
   --shimmer-highlight: var(--color-neutral-light-10);
   --shimmer-highlight-primary: var(--color-neutral-mid-30);
   --shimmer-highlight-content: var(--color-neutral-light-05);
+}
+
+/*------------------------------------*\
+  SKELETON - FIELD
+\*------------------------------------*/
+po-input,
+po-textarea,
+po-select,
+po-combo,
+po-datepicker,
+po-datepicker-range,
+po-decimal,
+po-email,
+po-login,
+po-lookup,
+po-multiselect,
+po-number,
+po-password,
+po-url {
+  --skeleton-color: var(--color-neutral-light-20);
+  --skeleton-shimmer-highlight: var(--color-neutral-light-10);
+  --skeleton-border-radius: var(--border-radius-sm);
+  --skeleton-animation-duration: 3s;
+  --skeleton-label-height: 14px;
+  --skeleton-label-width: 30%;
+  --skeleton-textarea-height: 120px;
 }
 
 :root {
