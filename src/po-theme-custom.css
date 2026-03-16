@@ -80,7 +80,7 @@
  * Rich Text......................variáveis do Rich Text.
  * Search.........................variáveis do Search.
  * Select.........................variáveis do Select.
- * Skeleton Container.............variáveis do Skeleton Container.
+ * Skeleton.......................variáveis do Skeleton.
  * Slide..........................variáveis do Slide.
  * Stepper........................variáveis do Stepper.
  * Switch.........................variáveis do Switch.
@@ -1509,14 +1509,31 @@ po-select {
 }
 
 /*------------------------------------*\
-  SKELETON CONTAINER
+  SKELETON
 \*------------------------------------*/
-[data-po-skeleton='true'] {
-  --po-skeleton-container-color: var(--color-neutral-light-20);
-  --po-skeleton-container-shimmer-highlight: var(--color-neutral-light-30);
-  --po-skeleton-container-border-radius: var(--border-radius-md);
-  --po-skeleton-container-animation-duration: 3s;
-  --po-skeleton-container-animation-timing: ease-in-out;
+po-skeleton {
+  --color: var(--color-neutral-light-20);
+  --border-radius: var(--border-radius-md);
+  --border-radius-text: var(--border-radius-md);
+  --transition-property: all;
+  --transition-duration: var(--duration-moderate);
+  --transition-timing: var(--timing-continuous);
+  --animation-duration-pulse: var(--duration-very-slow);
+  --animation-duration-shimmer: var(--duration-ultra-slow);
+  --margin-bottom: var(--spacing-xs);
+
+  /* type: primary */
+  --color-primary: var(--color-neutral-mid-40);
+  --border-radius-primary: var(--border-radius-md);
+
+  /* type: content */
+  --color-content: var(--color-neutral-light-00);
+  --border-radius-content: var(--border-radius-lg);
+
+  /* shimmer highlights */
+  --shimmer-highlight: var(--color-neutral-light-30);
+  --shimmer-highlight-primary: var(--color-neutral-light-20);
+  --shimmer-highlight-content: var(--color-neutral-light-05);
 }
 
 :root {
