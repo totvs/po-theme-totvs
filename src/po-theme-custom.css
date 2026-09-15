@@ -1143,9 +1143,13 @@ po-listbox {
 \*------------------------------------*/
 :root {
   --color-list-view-background-color: var(--color-neutral-light-00);
-  --color-list-view-border: var(--color-list-view-border);
-  --color-list-view-color-primary: var(--color-action-default);
-  --color-list-view-color-primary-hover: var(--color-brand-01-dark);
+  --color-list-view-border: var(--color-neutral-light-10);
+  --color-list-view-color-primary: var(
+    --color-action-default
+  ); /* @deprecated 22.x.x — Substituído por --color-list-view-title */
+  --color-list-view-color-primary-hover: var(
+    --color-brand-01-dark
+  ); /* @deprecated 22.x.x — Substituído por --color-list-view-title */
   --color-list-view-color-select-all-label: var(--color-neutral);
 }
 
