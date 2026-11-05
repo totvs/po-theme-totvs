@@ -490,6 +490,34 @@ po-button {
   --text-color-disabled: var(--color-neutral-dark-70);
   --color-disabled: var(--color-action-disabled);
   --background-color-disabled: var(--color-transparent);
+
+  /* glow */
+  --color-glow: var(--color-action-default);
+  --text-color-glow: var(--color-neutral-light-00);
+  --color-glow-hover-start: var(--color-brand-01-base);
+  --color-glow-hover-end: var(--color-brand-01-dark);
+  --color-glow-highlight: var(--color-brand-01-light);
+  --color-glow-pressed: var(--color-action-pressed);
+  --color-glow-ring: var(--color-neutral-light-00);
+  --color-glow-inner: var(--color-neutral-light-00);
+  --color-glow-halo: var(--color-action-default);
+  --border-width-glow: var(--border-width-md);
+  --size-glow-ring-dot: var(--spacing-xl);
+  --size-glow-halo-dot: var(--spacing-2xl);
+  --spacing-glow-path: var(--border-width-sm);
+  --blur-glow-halo: var(--spacing-sm);
+  --opacity-glow-halo: 0.3;
+  --opacity-glow-halo-hover: 0.5;
+  --opacity-glow-inner: 0.55;
+  --duration-glow-lap: 3200ms;
+  --duration-glow-step: 30ms;
+  --duration-glow-state: var(--duration-extra-slow);
+  --timing-glow: var(--timing-exiting);
+  --scale-glow-pressed: 0.98;
+
+  /* fallback para navegadores sem suporte a offset-path com formas básicas */
+  --glow-trail-start: 252deg;
+  --spacing-glow-halo: var(--spacing-xxs);
 }
 
 po-badge {
